@@ -53,6 +53,14 @@
         margin-top: -1px;
         transition: all 0.5s ease;
       }
+      &::before {
+        transform: translateY(-8px);
+        width: 20px;
+      }
+      &::after {
+        transform: translateY(8px);
+        width: 40px;
+      }
     }
     &:hover span {
       width: 40px;
@@ -64,48 +72,25 @@
         transition: all 0.5s ease;
       }
     }
-  }
-
-  &__hamburger {
-    span {
-      &::before {
-        transform: translateY(-8px);
-        width: 20px;
-      }
+    &.close-burger span::before {
+      width: 40px;
+      transform: rotate(45deg);
     }
-  }
-
-  &__hamburger {
-    span {
-      &::after {
-        transform: translateY(8px);
-        width: 40px;
-      }
+    &.close-burger span {
+      width: 40px;
+      height: 0;
     }
-  }
-
-  &__hamburger.close-burger span::before {
-    width: 40px;
-    transform: rotate(45deg);
-  }
-
-  &__hamburger.close-burger span {
-    width: 40px;
-    height: 0;
-  }
-
-  &__hamburger.close-burger span::after {
-    width: 40px;
-    transform: rotate(-45deg);
-  }
-
-  &__hamburger.close-burger span::before,
-  &__hamburger.close-burger span::after {
-    height: 3px;
-  }
-
-  &__hamburger.close-burger:hover span::before,
-  &__hamburger.close-burger:hover span::after {
-    transform: rotate(-360deg);
+    &.close-burger span::after {
+      width: 40px;
+      transform: rotate(-45deg);
+    }
+    &.close-burger span::before,
+    &.close-burger span::after {
+      height: 3px;
+    }
+    &.close-burger:hover span::before,
+    &.close-burger:hover span::after {
+      transform: rotate(-360deg);
+    }
   }
 }
