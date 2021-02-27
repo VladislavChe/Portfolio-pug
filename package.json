@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YaroslavShilov/Work-Blanks.git"
+    "url": "https://github.com/VladislavChe"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/YaroslavShilov/Work-Blanks/issues"
+    "url": "https://github.com/VladislavChe"
   },
-  "homepage": "https://github.com/YaroslavShilov/Work-Blanks#readme",
+  "homepage": "https://github.com/VladislavChe",
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
