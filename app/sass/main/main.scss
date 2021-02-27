@@ -1,0 +1,402 @@
+@import 'all-libs';
+@import 'all-tools';
+@import 'all-blocks';
+@import 'all-temp';
+@import 'all-pages';
+
+.wrappoffer {
+  justify-content: center;
+}
+
+.name {
+  position: absolute;
+  top: 50%;
+  margin-top: -45px;
+  left: 50%;
+  margin-left: -265px;
+}
+
+.name h1 {
+  font-family: $montserrat;
+  font-size: 49px;
+  text-align: center;
+  width: 100%;
+  color: #c8c8c8;
+}
+
+.name h2 {
+  font-family: $opensans;
+  font-size: 29px;
+  text-align: center;
+  text-transform: none;
+  font-weight: 400;
+  color: $mainColor;
+}
+.cursor {
+  line-height: 37px;
+  font-size: 41px;
+  color: #fff;
+}
+
+.cursorhover {
+  visibility: hidden;
+}
+
+.cursor2 {
+  visibility: hidden;
+}
+
+.cursorhover2 {
+  visibility: visible;
+}
+
+/*Burger-menu*/
+.burger-menu {
+  position: absolute;
+  padding-top: 50px;
+  background: #020202;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  top: -200vh;
+  transition: all 0.5s ease-out;
+}
+
+.burger-menu.oppened {
+  top: 0;
+  transition: all 0.5s ease-out;
+}
+
+.burger-menu-inner-wrapp {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 10vh;
+}
+
+.menu-list {
+  padding-top: 50px;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.menu-list__item {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px;
+}
+
+.menu-list__link {
+  color: #c8c8c8;
+  font-size: 30px;
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
+
+.menu-list__link:hover {
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.close-burger {
+  color: #c8c8c8;
+  font-size: 30px;
+  transition: all 0.5s ease;
+}
+
+.close-burger:hover {
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.social-links {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  margin-left: -136px;
+}
+
+.social-links__list {
+  width: 272px;
+  margin: 0 auto;
+}
+
+.social-links__item {
+  margin-right: 50px;
+}
+
+.social-links__img {
+  width: 30px;
+  height: 30px;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.social-links__img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+/******************************************/
+/******************ABOUT/******************/
+/******************************************/
+.header-about {
+  background: #101010;
+  padding-bottom: 50px;
+  height: 100%;
+}
+.title-about {
+  text-align: center;
+  font-weight: 700;
+  font-family: 'Museo Sans Cyrl';
+}
+.title-about span {
+  color: $mainColor;
+}
+.title-about-text {
+  text-align: center;
+  font-family: 'Museo Sans Cyrl';
+  font-weight: 100;
+}
+.title-about-text span {
+  color: #a20916;
+}
+.wrapper-offer {
+  margin-top: 100px;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+}
+.offer {
+  padding: 40px;
+  width: 55%;
+}
+.offer-title {
+  font-size: 35px;
+  text-transform: none;
+  max-width: 450px;
+  margin-bottom: 25px;
+}
+.offer-title span {
+  color: $mainColor;
+}
+.offer-text {
+  font-size: 18px;
+  color: #c8c8c8;
+  opacity: 0.8;
+  max-width: 450px;
+  margin-bottom: 35px;
+}
+
+.offer-btn {
+  position: relative;
+  display: inline;
+  font-size: 20px;
+  padding: 10px 20px;
+  width: 50%;
+  border: 3px solid $mainColor;
+  border-radius: 4px;
+  transition: all 300ms ease;
+  box-shadow: 0px 4px 10px 2px rgba(248, 248, 248, 0.2);
+  z-index: 1;
+  text-align: center;
+}
+.offer-btn:before {
+  position: absolute;
+  content: '';
+  width: 0%;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  left: 50%;
+  z-index: -1;
+  transition: all 400ms ease;
+}
+.offer-btn:hover {
+  color: #c8c8c8;
+  box-shadow: none;
+}
+.offer-btn:hover:before {
+  width: 100%;
+  background: $mainColor;
+  top: 0;
+  left: 0%;
+  z-index: -1;
+  transition: all 400ms ease;
+}
+.offer-foto {
+  width: 45%;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.offer-foto img {
+  width: 100%;
+  height: auto;
+  /* width: 576px;
+  height: 384px; */
+  /* margin-top: -40px; */
+}
+/*Responsive*/
+/* 992px - 1200px */
+@media screen and (max-width: 1200px) {
+  /* .container {
+    max-width: 940px;
+  } */
+}
+
+/* 768px - 992px */
+@media screen and (max-width: 992px) {
+  /* .container {
+    max-width: 700px;
+  } */
+  .name {
+    margin-left: -212px;
+    margin-top: -35px;
+  }
+  .name h1 {
+    font-size: 39px;
+  }
+  .name h2 {
+    font-size: 25px;
+  }
+  .cursor {
+    line-height: 30px;
+    font-size: 33px;
+  }
+  .cursor2 {
+    line-height: 26px;
+    font-size: 20px;
+  }
+  /******************ABOUT/******************/
+  .wrapper-offer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .offer {
+    width: 100%;
+    padding: 0px;
+  }
+  .offer-foto img {
+    display: none;
+  }
+  .offer-title {
+    margin: 0 auto 25px auto;
+    text-align: center;
+  }
+  .offer-text {
+    margin: 0 auto 35px auto;
+    text-align: center;
+  }
+  .offer-btn {
+    display: block;
+    width: 186px;
+    margin: 0 auto;
+  }
+  /******************ABOUT-END******************/
+}
+
+/* 576px - 768px */
+@media screen and (max-width: 768px) {
+  /* .container {
+    max-width: 520px;
+  } */
+  .logo-wrapp-img {
+    width: 50px;
+    height: 50px;
+  }
+  .hamburger.close-burger span::before,
+  .hamburger.close-burger span::after {
+    width: 30px;
+  }
+  .name {
+    margin-left: -159.22px;
+    margin-top: -33px;
+  }
+  .name h1 {
+    font-size: 29px;
+  }
+  .name h2 {
+    font-size: 21px;
+  }
+  .cursor {
+    line-height: 22px;
+    font-size: 24px;
+  }
+  .cursor2 {
+    line-height: 21px;
+    font-size: 17px;
+  }
+  .social-links__img {
+    width: 20px;
+    height: 20px;
+  }
+  .social-links {
+    margin-left: -116.5px;
+  }
+  .social-links__list {
+    width: 233px;
+  }
+  .burger-menu {
+    padding-top: 25px;
+  }
+  .menu-list__item {
+    padding: 10px;
+  }
+  .menu-list__link {
+    font-size: 20px;
+  }
+}
+
+/* 320px - 576px */
+@media screen and (max-width: 576px) {
+  /* .container {
+    width: 90%;
+  } */
+  .menu {
+    padding-top: 15px;
+  }
+  .name {
+    margin-left: -100.85px;
+    margin-top: -33px;
+  }
+  .name h1 {
+    font-size: 18px;
+  }
+  .name h2 {
+    font-size: 15px;
+  }
+  .wrappoffer {
+    height: 26px;
+  }
+  .cursor {
+    line-height: 13px;
+    font-size: 16px;
+  }
+  .cursor2 {
+    line-height: 12px;
+    font-size: 14px;
+  }
+  /******************ABOUT******************/
+  .title-about {
+    margin-top: 50px;
+    font-size: 40px;
+  }
+  .wrapper-offer {
+    margin-top: 50px;
+  }
+  .offer-title {
+    font-size: 30px;
+  }
+  .offer-text {
+    font-size: 15px;
+  }
+  .offer-btn {
+    font-size: 15px;
+  }
+  /******************ABOUT-END******************/
+}

@@ -1,0 +1,50 @@
+/* HEADER */
+.header {
+  position: relative;
+  height: 100vh;
+  background: transparent;
+  z-index: 2;
+  overflow-y: hidden;
+}
+
+.menu {
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 50px;
+}
+
+.logo {
+  display: inline-block;
+  border: 1px solid #c8c8c8;
+  border-radius: 50%;
+}
+
+.logo-wrapp-img {
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  img {
+    width: 50%;
+    height: 50%;
+    display: inline;
+  }
+}
+
+.logo-letters {
+  color: $mainColor;
+  transition: all 0.5s ease;
+  cursor: crosshair;
+  &:hover {
+    transform: rotate(-35deg);
+    transition: all 0.5s ease;
+  }
+}
+
+.logo-letter-C {
+  margin-right: 3px;
+}

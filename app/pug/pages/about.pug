@@ -1,0 +1,50 @@
+extends ../temp/main
+
+block title 
+  title About
+
+block content 
+  header#header-about.header-about
+    include ../blocks/nav
+    .container
+      .menu.d-flex
+        #logo.logo
+          #logo-wrapp.logo-wrapp-img.d-flex
+            span.logo-letters CH
+        #hamburger.hamburger.pos-a
+          span
+      .wrapper-title-about
+        h1.title-about About 
+          span Me
+        p.title-about-text Get to Know 
+          span me...
+      .wrapper-offer.d-flex
+        .offer
+          h2.offer-title I'm creative 
+            span web developer 
+            | based in New York , USA
+          p.offer-text With 20 years of experience as a professional Web developer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step while working.
+          a.offer-btn(href='#') Узнать больше
+        .offer-foto.d-flex
+          img(src='img/src/avatar.png' alt='')
+  
+  //BEGIN skills
+  .skills
+    .container
+      h2.skills-title Мои навыки
+      ul.skills-list.d-flex
+        li.skills-list__item
+          img.skills-list__icon(src='#' alt='')
+          h3.skills-list__title Lorem ipsum
+          p.skills-list__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni incidunt accusantium
+        li.skills-list__item
+          img.skills-list__icon(src='#' alt='')
+          h3.skills-list__title Lorem ipsum
+          p.skills-list__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni incidunt accusantium
+        li.skills-list__item
+          img.skills-list__icon(src='#' alt='')
+          h3.skills-list__title Lorem ipsum
+          p.skills-list__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni incidunt accusantium
+      button TEST
+  //END skills	
+    

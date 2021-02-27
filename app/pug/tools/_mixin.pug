@@ -1,0 +1,7 @@
+mixin addSomeText(text1, ...text2)
+  h2=text1  
+  h2=text2
+
+mixin styles(...files)
+  each file in files
+    <link rel="stylesheet" href=#{file}>

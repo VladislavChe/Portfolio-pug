@@ -1,0 +1,132 @@
+
+/*HAMBURGER*/
+.hamburger {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.hamburger {
+  span {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 30px;
+    height: 2px;
+    background: #c8c8c8;
+    margin-top: -1px;
+    transition: all 0.5s ease;
+    &:before,
+    &:after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 30px;
+      height: 2px;
+      background: #c8c8c8;
+      margin-top: -1px;
+      transition: all 0.5s ease;
+    }
+  }
+}
+
+.hamburger:hover span {
+  width: 40px;
+  transition: all 0.5s ease;
+}
+
+.hamburger:hover span::before {
+  width: 40px;
+  transition: all 0.5s ease;
+}
+
+.hamburger span::before,
+.hamburger span::after {
+  content: '';
+}
+
+.hamburger span::before {
+  transform: translateY(-8px);
+  width: 20px;
+}
+
+.hamburger span::after {
+  transform: translateY(8px);
+  width: 40px;
+}
+
+.hamburger.close-burger span::before {
+  width: 40px;
+  transform: rotate(45deg);
+}
+
+.hamburger.close-burger span {
+  width: 40px;
+  height: 0;
+}
+
+.hamburger.close-burger span::after {
+  width: 40px;
+  transform: rotate(-45deg);
+}
+
+.hamburger.close-burger span::before,
+.hamburger.close-burger span::after {
+  height: 3px;
+}
+
+.hamburger.close-burger:hover span::before,
+.hamburger.close-burger:hover span::after {
+  transform: rotate(-360deg);
+}
+
+/* HEADER */
+.header {
+  position: relative;
+  height: 100vh;
+  background: transparent;
+  z-index: 2;
+  overflow-y: hidden;
+}
+
+.menu {
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 50px;
+}
+
+.logo {
+  display: inline-block;
+  border: 1px solid #c8c8c8;
+  border-radius: 50%;
+}
+
+.logo-wrapp-img {
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  img {
+    width: 50%;
+    height: 50%;
+    display: inline;
+  }
+}
+
+.logo-letters {
+  color: $mainColor;
+  transition: all 0.5s ease;
+  cursor: crosshair;
+  &:hover {
+    transform: rotate(-35deg);
+    transition: all 0.5s ease;
+  }
+}
+
+.logo-letter-C {
+  margin-right: 3px;
+}

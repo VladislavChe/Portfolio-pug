@@ -1,0 +1,23 @@
+1) Установка пакетов
+nmp i
+
+2) Запуск Gulp
+gulp
+
+3) Сжать изображения
+gulp images
+
+4) Удалить исходники изображений из начальной папки src
+gulp cleanimgsrc
+
+5) Удалить сжатые изображения из конечной папки dest
+gulp cleanimg
+
+6) Собрать проект в папку dist
+gulp build
+
+7) Удалить собранный проект из папки dist
+gulp cleandist
+
+8) Быстрое удаление папки node_modules 
+rimraf node_modules 
