@@ -16,7 +16,8 @@ if (!index) {
   //     logoImg.classList.remove('animate__flip');
   //   }, 800);
   // });
-  /*Анимация offer*/
+
+  /*animateTypeName-Start*/
   const namee = document.getElementById('name'),
     stuck = document.getElementById('stuck'),
     myName = document.getElementById('myname');
@@ -35,11 +36,11 @@ if (!index) {
 
   const typeWord = (arr1, arr2) => {
     namee.innerHTML += `
-    <div class="wrappoffer d-flex"">
-      <h1 id="stuck" style="width: 100%;"></h1><span id="cursor1" class="cursor">|</span>
+    <div class="header__wrappoffer d-flex"">
+      <h1 id="stuck" style="width: 100%;"></h1><span id="cursor1" class="header__cursor">|</span>
     </div>   
-    <div class="wrappoffer d-flex"">
-      <h2 id="myname"></h2><span id="cursor2" class="cursor2">|</span>
+    <div class="header__wrappoffer d-flex"">
+      <h2 id="myname"></h2><span id="cursor2" class="header__cursor2">|</span>
     </div>
     `;
 
@@ -51,7 +52,7 @@ if (!index) {
     function tickCursor1(n) {
       if (n == 0) {
         setTimeout(() => {
-          cursor1.classList.toggle('cursorhover');
+          cursor1.classList.toggle('header__cursorhover');
           if (ticTac == 0) {
             tickCursor1(0);
           }
@@ -63,7 +64,7 @@ if (!index) {
     function tickCursor2(n) {
       if (n == 0) {
         setTimeout(() => {
-          cursor2.classList.toggle('cursorhover2');
+          cursor2.classList.toggle('header__cursorhover2');
           if (ticTac == 0) {
             tickCursor2(0);
           }
@@ -120,8 +121,9 @@ if (!index) {
 
   typeWord(stuckArr, myNameArr);
 }
+/*animateTypeName-End*/
 
-/* Burger-menu */
+/*burgerMenu-Start*/
 const hamburger = document.getElementById('hamburger');
 const menu = document.getElementById('burger-menu');
 const closeBurger = document.getElementById('close-burger');
@@ -133,5 +135,6 @@ hamburger.addEventListener('click', function () {
 closeBurger.addEventListener('click', function () {
   menu.classList.remove('oppened');
 });
+/*burgerMenu-End*/
 
 /*index.html - END*/

@@ -1,16 +1,17 @@
-/*MENU*/
+/*menu*/
 .menu {
   justify-content: space-between;
   width: 100%;
   padding-top: 50px;
 
+  /*logo-Start*/
   &__logo {
     display: inline-block;
     border: 1px solid #c8c8c8;
     border-radius: 50%;
   }
 
-  &__logo-wrapp-img {
+  &__logo-wrapp {
     width: 60px;
     height: 60px;
     justify-content: center;
@@ -27,7 +28,9 @@
       transition: all 0.5s ease;
     }
   }
+  /*logo-END*/
 
+  /*hamburger-Start*/
   &__hamburger {
     width: 50px;
     height: 50px;
@@ -73,4 +76,5 @@
       }
     }
   }
+  /*hamburger-End*/
 }

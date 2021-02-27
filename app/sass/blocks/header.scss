@@ -1,8 +1,87 @@
-/* HEADER */
+/*header*/
 .header {
   position: relative;
   height: 100vh;
   background: transparent;
   z-index: 2;
   overflow-y: hidden;
+
+  /*animateTypeName-Start*/
+  &__wrappoffer {
+    justify-content: center;
+  }
+
+  &__name {
+    position: absolute;
+    top: 50%;
+    margin-top: -45px;
+    left: 50%;
+    margin-left: -265px;
+  }
+
+  &__name h1 {
+    font-family: $montserrat;
+    font-size: 49px;
+    text-align: center;
+    width: 100%;
+    color: #c8c8c8;
+  }
+
+  &__name h2 {
+    font-family: $opensans;
+    font-size: 29px;
+    text-align: center;
+    text-transform: none;
+    font-weight: 400;
+    color: $mainColor;
+  }
+  &__cursor {
+    line-height: 37px;
+    font-size: 41px;
+    color: #fff;
+  }
+
+  &__cursorhover {
+    visibility: hidden;
+  }
+
+  &__cursor2 {
+    visibility: hidden;
+  }
+
+  &__cursorhover2 {
+    visibility: visible;
+  }
+  /*animateTypeName-End*/
+
+  /*social-links-Start*/
+  &__social-links {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    margin-left: -136px;
+  }
+
+  &__social-links-list {
+    width: 272px;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+
+  &__social-list-item {
+    a {
+      img {
+        width: 30px;
+        height: 30px;
+        opacity: 0.6;
+        transition: all 0.3s ease;
+        &:hover {
+          opacity: 1;
+          transform: scale(1.1);
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+  /*social-links-End*/
 }

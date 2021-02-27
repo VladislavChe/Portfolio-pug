@@ -1,6 +1,10 @@
 /*Open-burger*/
-
 .burger-menu {
+  &.oppened {
+    top: 0;
+    transition: all 0.5s ease-out;
+  }
+
   position: absolute;
   padding-top: 50px;
   background: #020202;
@@ -10,13 +14,14 @@
   top: -200vh;
   transition: all 0.5s ease-out;
 
+  /*logo-Start*/
   &__logo {
     display: inline-block;
     border: 1px solid #c8c8c8;
     border-radius: 50%;
   }
 
-  &__logo-wrapp-img {
+  &__logo-wrapp {
     width: 60px;
     height: 60px;
     justify-content: center;
@@ -33,12 +38,54 @@
       transition: all 0.5s ease;
     }
   }
+  /*logo-End*/
 
-  &.oppened {
-    top: 0;
-    transition: all 0.5s ease-out;
+  /*burger-Start*/
+  &__close {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    color: #c8c8c8;
+    font-size: 30px;
+    transition: all 0.5s ease;
+    span {
+      width: 40px;
+      height: 0;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 30px;
+        height: 3px;
+        background: #c8c8c8;
+        margin-top: -1px;
+        transition: all 0.5s ease;
+      }
+      &::before {
+        width: 40px;
+        transform: rotate(45deg);
+      }
+      &::after {
+        width: 40px;
+        transform: rotate(-45deg);
+      }
+    }
+    &:hover span {
+      &::before,
+      &::after {
+        transform: rotate(-360deg);
+      }
+    }
+    &:hover {
+      color: #fff;
+      transition: all 0.5s ease;
+    }
   }
+  /*burger-End*/
 
+  /*menuList-Start*/
   &__inner-wrapp {
     display: flex;
     justify-content: space-between;
@@ -72,47 +119,5 @@
     color: #fff;
     transition: all 0.5s ease;
   }
-}
-
-.burger-menu__close {
-  width: 50px;
-  height: 50px;
-  position: relative;
-  color: #c8c8c8;
-  font-size: 30px;
-  transition: all 0.5s ease;
-  span {
-    width: 40px;
-    height: 0;
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      right: 0;
-      width: 30px;
-      height: 3px;
-      background: #c8c8c8;
-      margin-top: -1px;
-      transition: all 0.5s ease;
-    }
-    &::before {
-      width: 40px;
-      transform: rotate(45deg);
-    }
-    &::after {
-      width: 40px;
-      transform: rotate(-45deg);
-    }
-  }
-  &:hover span {
-    &::before,
-    &::after {
-      transform: rotate(-360deg);
-    }
-  }
-  &:hover {
-    color: #fff;
-    transition: all 0.5s ease;
-  }
+  /*menuList-End*/
 }
