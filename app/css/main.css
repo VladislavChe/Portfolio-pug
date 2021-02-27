@@ -464,89 +464,6 @@ li {
   background: #111111;
   z-index: 1; }
 
-/*HAMBURGER*/
-.hamburger {
-  width: 50px;
-  height: 50px;
-  position: relative; }
-
-.hamburger span {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 30px;
-  height: 2px;
-  background: #c8c8c8;
-  margin-top: -1px;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
-  .hamburger span:before, .hamburger span:after {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 30px;
-    height: 2px;
-    background: #c8c8c8;
-    margin-top: -1px;
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease; }
-
-.hamburger:hover span {
-  width: 40px;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
-
-.hamburger:hover span::before {
-  width: 40px;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
-
-.hamburger span::before,
-.hamburger span::after {
-  content: ''; }
-
-.hamburger span::before {
-  -webkit-transform: translateY(-8px);
-      -ms-transform: translateY(-8px);
-          transform: translateY(-8px);
-  width: 20px; }
-
-.hamburger span::after {
-  -webkit-transform: translateY(8px);
-      -ms-transform: translateY(8px);
-          transform: translateY(8px);
-  width: 40px; }
-
-.hamburger.close-burger span::before {
-  width: 40px;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg); }
-
-.hamburger.close-burger span {
-  width: 40px;
-  height: 0; }
-
-.hamburger.close-burger span::after {
-  width: 40px;
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg); }
-
-.hamburger.close-burger span::before,
-.hamburger.close-burger span::after {
-  height: 3px; }
-
-.hamburger.close-burger:hover span::before,
-.hamburger.close-burger:hover span::after {
-  -webkit-transform: rotate(-360deg);
-      -ms-transform: rotate(-360deg);
-          transform: rotate(-360deg); }
-
 /* HEADER */
 .header {
   position: relative;
@@ -555,50 +472,108 @@ li {
   z-index: 2;
   overflow-y: hidden; }
 
+/*MENU*/
 .menu {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
   padding-top: 50px; }
-
-.logo {
-  display: inline-block;
-  border: 1px solid #c8c8c8;
-  border-radius: 50%; }
-
-.logo-wrapp-img {
-  width: 60px;
-  height: 60px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px; }
-
-.logo img {
-  width: 50%;
-  height: 50%;
-  display: inline; }
-
-.logo-letters {
-  color: #c70039;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  cursor: crosshair; }
-  .logo-letters:hover {
-    -webkit-transform: rotate(-35deg);
-        -ms-transform: rotate(-35deg);
-            transform: rotate(-35deg);
+  .menu__logo {
+    display: inline-block;
+    border: 1px solid #c8c8c8;
+    border-radius: 50%; }
+  .menu__logo-wrapp-img {
+    width: 60px;
+    height: 60px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px; }
+  .menu__logo-letters {
+    color: #c70039;
     -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
-    transition: all 0.5s ease; }
-
-.logo-letter-C {
-  margin-right: 3px; }
+    transition: all 0.5s ease;
+    cursor: crosshair; }
+    .menu__logo-letters:hover {
+      -webkit-transform: rotate(-35deg);
+          -ms-transform: rotate(-35deg);
+              transform: rotate(-35deg);
+      -webkit-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+  .menu__hamburger {
+    width: 50px;
+    height: 50px;
+    position: relative; }
+    .menu__hamburger span {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 30px;
+      height: 2px;
+      background: #c8c8c8;
+      margin-top: -1px;
+      -webkit-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+      .menu__hamburger span::before, .menu__hamburger span::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 30px;
+        height: 2px;
+        background: #c8c8c8;
+        margin-top: -1px;
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease; }
+    .menu__hamburger:hover span {
+      width: 40px;
+      -webkit-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+    .menu__hamburger:hover span::before {
+      width: 40px;
+      -webkit-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+  .menu__hamburger span::before {
+    -webkit-transform: translateY(-8px);
+        -ms-transform: translateY(-8px);
+            transform: translateY(-8px);
+    width: 20px; }
+  .menu__hamburger span::after {
+    -webkit-transform: translateY(8px);
+        -ms-transform: translateY(8px);
+            transform: translateY(8px);
+    width: 40px; }
+  .menu__hamburger.close-burger span::before {
+    width: 40px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .menu__hamburger.close-burger span {
+    width: 40px;
+    height: 0; }
+  .menu__hamburger.close-burger span::after {
+    width: 40px;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  .menu__hamburger.close-burger span::before,
+  .menu__hamburger.close-burger span::after {
+    height: 3px; }
+  .menu__hamburger.close-burger:hover span::before,
+  .menu__hamburger.close-burger:hover span::after {
+    -webkit-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+            transform: rotate(-360deg); }
 
 .wrappoffer {
   -webkit-box-pack: center;
