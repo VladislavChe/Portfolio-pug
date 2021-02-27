@@ -553,27 +553,6 @@ li {
       -webkit-transition: all 0.5s ease;
       -o-transition: all 0.5s ease;
       transition: all 0.5s ease; }
-    .menu__hamburger.close-burger span::before {
-      width: 40px;
-      -webkit-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
-              transform: rotate(45deg); }
-    .menu__hamburger.close-burger span {
-      width: 40px;
-      height: 0; }
-    .menu__hamburger.close-burger span::after {
-      width: 40px;
-      -webkit-transform: rotate(-45deg);
-          -ms-transform: rotate(-45deg);
-              transform: rotate(-45deg); }
-    .menu__hamburger.close-burger span::before,
-    .menu__hamburger.close-burger span::after {
-      height: 3px; }
-    .menu__hamburger.close-burger:hover span::before,
-    .menu__hamburger.close-burger:hover span::after {
-      -webkit-transform: rotate(-360deg);
-          -ms-transform: rotate(-360deg);
-              transform: rotate(-360deg); }
 
 /*Open-burger*/
 .burger-menu {
@@ -587,73 +566,125 @@ li {
   -webkit-transition: all 0.5s ease-out;
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out; }
+  .burger-menu__logo {
+    display: inline-block;
+    border: 1px solid #c8c8c8;
+    border-radius: 50%; }
+  .burger-menu__logo-wrapp-img {
+    width: 60px;
+    height: 60px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px; }
+  .burger-menu__logo-letters {
+    color: #c70039;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    cursor: crosshair; }
+    .burger-menu__logo-letters:hover {
+      -webkit-transform: rotate(-35deg);
+          -ms-transform: rotate(-35deg);
+              transform: rotate(-35deg);
+      -webkit-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+  .burger-menu.oppened {
+    top: 0;
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out; }
+  .burger-menu__inner-wrapp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 10vh; }
+  .burger-menu__menu-list {
+    padding-top: 50px;
+    height: 90vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  .burger-menu__item {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px; }
+  .burger-menu__link {
+    color: #c8c8c8;
+    font-size: 30px;
+    font-weight: bold;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+  .burger-menu__link:hover {
+    color: #fff;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
 
-.burger-menu.oppened {
-  top: 0;
-  -webkit-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out; }
-
-.burger-menu-inner-wrapp {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  height: 10vh; }
-
-.menu-list {
-  padding-top: 50px;
-  height: 90vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start; }
-
-.menu-list__item {
-  text-transform: uppercase;
-  text-align: center;
-  padding: 20px; }
-
-.menu-list__link {
+.burger-menu__close {
+  width: 50px;
+  height: 50px;
+  position: relative;
   color: #c8c8c8;
   font-size: 30px;
-  font-weight: bold;
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease; }
-
-.menu-list__link:hover {
-  color: #fff;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
-
-.close-burger {
-  color: #c8c8c8;
-  font-size: 30px;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
-
-.close-burger:hover {
-  color: #fff;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
+  .burger-menu__close span {
+    width: 40px;
+    height: 0; }
+    .burger-menu__close span::before, .burger-menu__close span::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 30px;
+      height: 3px;
+      background: #c8c8c8;
+      margin-top: -1px;
+      -webkit-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+    .burger-menu__close span::before {
+      width: 40px;
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .burger-menu__close span::after {
+      width: 40px;
+      -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+  .burger-menu__close:hover span::before, .burger-menu__close:hover span::after {
+    -webkit-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+            transform: rotate(-360deg); }
+  .burger-menu__close:hover {
+    color: #fff;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
 
 .wrappoffer {
   -webkit-box-pack: center;

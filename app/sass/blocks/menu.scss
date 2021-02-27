@@ -72,25 +72,5 @@
         transition: all 0.5s ease;
       }
     }
-    &.close-burger span::before {
-      width: 40px;
-      transform: rotate(45deg);
-    }
-    &.close-burger span {
-      width: 40px;
-      height: 0;
-    }
-    &.close-burger span::after {
-      width: 40px;
-      transform: rotate(-45deg);
-    }
-    &.close-burger span::before,
-    &.close-burger span::after {
-      height: 3px;
-    }
-    &.close-burger:hover span::before,
-    &.close-burger:hover span::after {
-      transform: rotate(-360deg);
-    }
   }
 }
