@@ -10,6 +10,9 @@
   /*animateTypeName-Start*/
   &__wrappoffer {
     justify-content: center;
+    @include media(576px) {
+      height: 26px;
+    }
   }
 
   &__name {
@@ -18,6 +21,18 @@
     margin-top: -45px;
     left: 50%;
     margin-left: -265px;
+    @include media(992px) {
+      margin-left: -212px;
+      margin-top: -35px;
+    }
+    @include media(768px) {
+      margin-left: -159.22px;
+      margin-top: -33px;
+    }
+    @include media(576px) {
+      margin-left: -100.85px;
+      margin-top: -33px;
+    }
   }
 
   &__name h1 {
@@ -26,6 +41,15 @@
     text-align: center;
     width: 100%;
     color: #c8c8c8;
+    @include media(992px) {
+      font-size: 39px;
+    }
+    @include media(768px) {
+      font-size: 29px;
+    }
+    @include media(576px) {
+      font-size: 18px;
+    }
   }
 
   &__name h2 {
@@ -35,11 +59,32 @@
     text-transform: none;
     font-weight: 400;
     color: $mainColor;
+    @include media(992px) {
+      font-size: 25px;
+    }
+    @include media(768px) {
+      font-size: 21px;
+    }
+    @include media(576px) {
+      font-size: 15px;
+    }
   }
   &__cursor {
     line-height: 37px;
     font-size: 41px;
     color: #fff;
+    @include media(992px) {
+      line-height: 30px;
+      font-size: 33px;
+    }
+    @include media(768px) {
+      line-height: 22px;
+      font-size: 24px;
+    }
+    @include media(576px) {
+      line-height: 13px;
+      font-size: 16px;
+    }
   }
 
   &__cursorhover {
@@ -48,6 +93,18 @@
 
   &__cursor2 {
     visibility: hidden;
+    @include media(992px) {
+      line-height: 26px;
+      font-size: 20px;
+    }
+    @include media(768px) {
+      line-height: 21px;
+      font-size: 17px;
+    }
+    @include media(576px) {
+      line-height: 12px;
+      font-size: 14px;
+    }
   }
 
   &__cursorhover2 {
@@ -61,12 +118,18 @@
     bottom: 5%;
     left: 50%;
     margin-left: -136px;
+    @include media(768px) {
+      margin-left: -116.5px;
+    }
   }
 
   &__social-links-list {
     width: 272px;
     margin: 0 auto;
     justify-content: space-around;
+    @include media(768px) {
+      width: 233px;
+    }
   }
 
   &__social-list-item {
@@ -92,20 +155,28 @@
   justify-content: space-between;
   width: 100%;
   padding-top: 50px;
+  /*Responsive-Start*/
+  @include media(576px) {
+    padding-top: 15px;
+  }
+  /*Responsive-End*/
 
   /*logo-Start*/
-  &__logo {
-    display: inline-block;
-    border: 1px solid #c8c8c8;
-    border-radius: 50%;
-  }
-
   &__logo-wrapp {
     width: 60px;
     height: 60px;
     justify-content: center;
     align-items: center;
     padding: 10px;
+    @include media(768px) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  &__logo {
+    display: inline-block;
+    border: 1px solid #c8c8c8;
+    border-radius: 50%;
   }
 
   &__logo-letters {
@@ -170,11 +241,6 @@
 
 /*Open-burger*/
 .burger-menu {
-  &.oppened {
-    top: 0;
-    transition: all 0.5s ease-out;
-  }
-
   position: absolute;
   padding-top: 50px;
   background: #020202;
@@ -183,6 +249,14 @@
   z-index: 3;
   top: -200vh;
   transition: all 0.5s ease-out;
+  @include media(768px) {
+    padding-top: 25px;
+  }
+
+  &.oppened {
+    top: 0;
+    transition: all 0.5s ease-out;
+  }
 
   /*logo-Start*/
   &__logo {
@@ -197,6 +271,10 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
+    @include media(768px) {
+      width: 50px;
+      height: 50px;
+    }
   }
 
   &__logo-letters {
@@ -227,18 +305,19 @@
         position: absolute;
         top: 50%;
         right: 0;
-        width: 30px;
+        width: 40px;
         height: 3px;
         background: #c8c8c8;
         margin-top: -1px;
         transition: all 0.5s ease;
+        @include media(768px) {
+          width: 30px;
+        }
       }
       &::before {
-        width: 40px;
         transform: rotate(45deg);
       }
       &::after {
-        width: 40px;
         transform: rotate(-45deg);
       }
     }
@@ -290,4 +369,8 @@
     transition: all 0.5s ease;
   }
   /*menuList-End*/
+
+  /*Responsive-Start*/
+
+  /*Responsive-End*/
 }

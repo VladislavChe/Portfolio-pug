@@ -28,7 +28,10 @@ task('browser-sync', function () {
       baseDir: 'app',
     },
     notify: true,
-    online: true,
+    online: false,
+    socket: {
+      domain: 'localhost:3000',
+    },
   });
 });
 

@@ -103,6 +103,7 @@
   height: 384px; */
   /* margin-top: -40px; */
 }
+
 /*Responsive*/
 /* 992px - 1200px */
 @media screen and (max-width: 1200px) {
@@ -116,24 +117,7 @@
   /* .container {
     max-width: 700px;
   } */
-  .name {
-    margin-left: -212px;
-    margin-top: -35px;
-  }
-  .name h1 {
-    font-size: 39px;
-  }
-  .name h2 {
-    font-size: 25px;
-  }
-  .cursor {
-    line-height: 30px;
-    font-size: 33px;
-  }
-  .cursor2 {
-    line-height: 26px;
-    font-size: 20px;
-  }
+
   /******************ABOUT/******************/
   .wrapper-offer {
     flex-direction: column;
@@ -168,51 +152,6 @@
   /* .container {
     max-width: 520px;
   } */
-  .logo-wrapp-img {
-    width: 50px;
-    height: 50px;
-  }
-  .hamburger.close-burger span::before,
-  .hamburger.close-burger span::after {
-    width: 30px;
-  }
-  .name {
-    margin-left: -159.22px;
-    margin-top: -33px;
-  }
-  .name h1 {
-    font-size: 29px;
-  }
-  .name h2 {
-    font-size: 21px;
-  }
-  .cursor {
-    line-height: 22px;
-    font-size: 24px;
-  }
-  .cursor2 {
-    line-height: 21px;
-    font-size: 17px;
-  }
-  .social-links__img {
-    width: 20px;
-    height: 20px;
-  }
-  .social-links {
-    margin-left: -116.5px;
-  }
-  .social-links__list {
-    width: 233px;
-  }
-  .burger-menu {
-    padding-top: 25px;
-  }
-  .menu-list__item {
-    padding: 10px;
-  }
-  .menu-list__link {
-    font-size: 20px;
-  }
 }
 
 /* 320px - 576px */
@@ -220,30 +159,7 @@
   /* .container {
     width: 90%;
   } */
-  .menu {
-    padding-top: 15px;
-  }
-  .name {
-    margin-left: -100.85px;
-    margin-top: -33px;
-  }
-  .name h1 {
-    font-size: 18px;
-  }
-  .name h2 {
-    font-size: 15px;
-  }
-  .wrappoffer {
-    height: 26px;
-  }
-  .cursor {
-    line-height: 13px;
-    font-size: 16px;
-  }
-  .cursor2 {
-    line-height: 12px;
-    font-size: 14px;
-  }
+
   /******************ABOUT******************/
   .title-about {
     margin-top: 50px;

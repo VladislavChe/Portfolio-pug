@@ -3,20 +3,28 @@
   justify-content: space-between;
   width: 100%;
   padding-top: 50px;
+  /*Responsive-Start*/
+  @include media(576px) {
+    padding-top: 15px;
+  }
+  /*Responsive-End*/
 
   /*logo-Start*/
-  &__logo {
-    display: inline-block;
-    border: 1px solid #c8c8c8;
-    border-radius: 50%;
-  }
-
   &__logo-wrapp {
     width: 60px;
     height: 60px;
     justify-content: center;
     align-items: center;
     padding: 10px;
+    @include media(768px) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  &__logo {
+    display: inline-block;
+    border: 1px solid #c8c8c8;
+    border-radius: 50%;
   }
 
   &__logo-letters {
