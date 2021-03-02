@@ -334,6 +334,7 @@ form,
 span,
 ul,
 li {
+  font-family: "Open Sans", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
@@ -345,6 +346,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
   text-transform: uppercase; }
@@ -433,6 +435,9 @@ li {
 
 .height {
   height: 100vh; }
+
+h3 {
+  font-size: 25px; }
 
 /* BACKGROUND */
 #particles-js {
@@ -966,28 +971,48 @@ li {
     margin-bottom: 100px; }
     .skills__title span {
       color: #c70039; }
-  .skills__list-icon svg {
-    width: 50px;
-    height: 50px; }
-    .skills__list-icon svg path {
-      fill: whitesmoke; }
-
-.service-img img {
-  display: inline-block;
-  z-index: 2;
-  position: relative;
-  margin: 20px;
-  border-radius: 30%;
-  padding: 10px;
-  border: 0px solid #c70039;
-  background: #c70039;
-  -webkit-box-shadow: 0px 0px 0px 0px #c70039;
-          box-shadow: 0px 0px 0px 0px #c70039;
-  height: 100px;
-  -webkit-transition: all 0.8s ease;
-  -o-transition: all 0.8s ease;
-  transition: all 0.8s ease; }
-
-.service:hover .service-img img {
-  -webkit-box-shadow: 0px 0px 0px 400px #c70039;
-          box-shadow: 0px 0px 0px 400px #c70039; }
+  .skills__list {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .skills__list-item {
+    height: 380px;
+    width: 30%;
+    padding-top: 30px;
+    border-radius: 10px;
+    -webkit-animation: opacity 1.4s ease;
+            animation: opacity 1.4s ease;
+    overflow: hidden; }
+    .skills__list-item:hover .skills__list-icon {
+      -webkit-box-shadow: 0px 0px 0px 400px #c70039;
+              box-shadow: 0px 0px 0px 400px #c70039; }
+  .skills__list-icon {
+    display: block;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 30%;
+    background: #c70039;
+    -webkit-box-shadow: 0px 0px 0px 0px #c70039;
+            box-shadow: 0px 0px 0px 0px #c70039;
+    -webkit-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+    transition: all 0.8s ease; }
+    .skills__list-icon svg {
+      width: 100%;
+      height: 100%; }
+      .skills__list-icon svg path {
+        fill: whitesmoke; }
+  .skills__list-title {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-transform: none; }
+  .skills__list-text {
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    opacity: 0.8;
+    line-height: 25px; }

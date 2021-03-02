@@ -24,6 +24,7 @@ form,
 span,
 ul,
 li {
+  font-family: $opensans;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -35,6 +36,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: $montserrat;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
@@ -124,6 +126,10 @@ li {
 
 .height {
   height: 100vh;
+}
+
+h3 {
+  font-size: 25px;
 }
 
 /* BACKGROUND */
