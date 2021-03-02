@@ -1,6 +1,6 @@
 .header-about {
-  background: #101010;
-  padding-bottom: 50px;
+  background: $bgcolor;
+  padding-bottom: 0px;
   height: 100%;
   /*title-Start*/
   &__title {
@@ -48,7 +48,7 @@
   &__offer-title {
     font-size: 35px;
     text-transform: none;
-    max-width: 450px;
+    max-width: 500px;
     margin-bottom: 25px;
     span {
       color: $mainColor;
@@ -112,7 +112,7 @@
     }
     @include media(992px) {
       display: block;
-      width: 186px;
+      width: 200px;
       margin: 0 auto;
     }
     @include media(576px) {
