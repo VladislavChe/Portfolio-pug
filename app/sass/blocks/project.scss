@@ -1,0 +1,41 @@
+.project {
+  display: inline-block;
+  justify-content: space-between;
+  padding: 20px;
+  width: 50%;
+  height: 420px;
+  overflow: hidden;
+  transition: $time;
+  &:hover {
+    .project__img,
+    .project__text {
+      transform: translateY(-70%);
+      transition: $time;
+    }
+  }
+  &__img {
+    position: relative;
+    height: 80%;
+    img {
+      height: 100%;
+    }
+  }
+  &__date {
+    position: absolute;
+    bottom: 0;
+    padding: 5px;
+    background: $mainColor;
+  }
+  &__text {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 28px;
+    height: 80%;
+    p {
+      font-size: 18px;
+      text-align: left;
+      margin-top: 40px;
+      line-height: 30px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.header-portolio {
+  background: $bgcolor;
+  &__wrapp-title {
+    text-align: center;
+    padding-bottom: 100px;
+  }
+  &__title {
+    text-transform: none;
+    span {
+      color: $mainColor;
+    }
+  }
+  &__text {
+    margin-top: 20px;
+    opacity: 0.8;
+    font-weight: 300;
+    span {
+      color: red;
+    }
+  }
+}
