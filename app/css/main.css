@@ -447,6 +447,18 @@ h3 {
   background: #111111;
   z-index: 1; }
 
+.footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #101010; }
+  .footer__link {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    opacity: 0.8; }
+    .footer__link:hover {
+      opacity: 1; }
+
 .header-about {
   background: #101010;
   padding-bottom: 0px;
@@ -701,25 +713,48 @@ h3 {
     width: 272px;
     margin: 0 auto;
     -ms-flex-pack: distribute;
-        justify-content: space-around; }
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
     @media only screen and (max-width: 768px) {
       .header__social-links-list {
         width: 233px; } }
-  .header__social-list-item a img {
-    width: 30px;
-    height: 30px;
-    opacity: 0.6;
+  .header__social-list-item a {
+    display: block;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease; }
-    .header__social-list-item a img:hover {
-      opacity: 1;
+    .header__social-list-item a svg {
+      width: 35px;
+      height: 35px; }
+      .header__social-list-item a svg path {
+        fill: whitesmoke;
+        opacity: 0.6; }
+    .header__social-list-item a:hover {
       -webkit-transform: scale(1.1);
           -ms-transform: scale(1.1);
               transform: scale(1.1);
       -webkit-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease; }
+      .header__social-list-item a:hover path {
+        opacity: 1; }
+    .header__social-list-item a img {
+      width: 30px;
+      height: 30px;
+      opacity: 0.6;
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+      .header__social-list-item a img:hover {
+        opacity: 1;
+        -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+                transform: scale(1.1);
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
 
 /*menu*/
 .menu {

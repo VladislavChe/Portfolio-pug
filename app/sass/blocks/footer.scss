@@ -1,0 +1,14 @@
+.footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: $bgcolor;
+  &__link {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    opacity: 0.8;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
