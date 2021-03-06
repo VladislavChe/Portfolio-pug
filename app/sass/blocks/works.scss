@@ -1,8 +1,9 @@
 .works {
   background: $bgcolor;
   padding-bottom: 100px;
-  justify-content: space-around;
+
   &__row {
     display: flex;
+    justify-content: space-around;
   }
 }
