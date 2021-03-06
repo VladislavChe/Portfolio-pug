@@ -5,3 +5,15 @@ mixin addSomeText(text1, ...text2)
 mixin styles(...files)
   each file in files
     <link rel="stylesheet" href=#{file}>
+
+
+mixin project(img, date, title, text)
+  div.project
+    a.project__link(href="#")
+      div.project__img
+        img(src=img, alt="")
+        span.project__date=date
+      div.project__text
+        h3=title
+        p=text
+    
