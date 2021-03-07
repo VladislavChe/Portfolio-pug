@@ -1062,9 +1062,12 @@ h3 {
     .project__text p {
       font-size: 18px;
       text-align: left;
-      margin-top: 40px;
+      margin: 40px auto 0 auto;
       text-align: center;
-      line-height: 30px; }
+      max-width: 85%;
+      line-height: 30px;
+      opacity: 0.9;
+      letter-spacing: 1px; }
 
 .skills {
   background: #101010;
