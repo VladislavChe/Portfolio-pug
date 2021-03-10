@@ -1,0 +1,18 @@
+.javascript {
+  background: $bgcolor;
+  padding-bottom: 50px;
+  &__title-wrapp {
+    text-align: center;
+  }
+  &__title {
+    text-transform: none;
+    margin-bottom: 20px;
+    span {
+      color: $mainColor;
+    }
+  }
+  &__text {
+    opacity: $opacity;
+    font-size: 18px;
+  }
+}

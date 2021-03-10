@@ -774,6 +774,20 @@ h3 {
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease; }
 
+.javascript {
+  background: #101010;
+  padding-bottom: 50px; }
+  .javascript__title-wrapp {
+    text-align: center; }
+  .javascript__title {
+    text-transform: none;
+    margin-bottom: 20px; }
+    .javascript__title span {
+      color: #c70039; }
+  .javascript__text {
+    opacity: 0.8;
+    font-size: 18px; }
+
 /*menu*/
 .menu {
   -webkit-box-pack: justify;
