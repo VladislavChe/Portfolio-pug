@@ -6,7 +6,7 @@
     display: block;
     text-align: center;
     font-size: 15px;
-    opacity: 0.8;
+    opacity: $opacity;
     &:hover {
       opacity: 1;
     }
