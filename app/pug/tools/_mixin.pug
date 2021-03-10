@@ -8,3 +8,12 @@ mixin project(img, date, title, text)
         h3=title
         p=text
     
+mixin card(color, number, title, text, img)
+  .card
+    .card__head(style=color)  
+      .card__number=number
+      h4.card__title=title
+    .card__body 
+      .card__text=text
+      .card__img 
+        img(src=img) 

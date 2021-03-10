@@ -1,3 +1,30 @@
+.card {
+  background: #fff;
+  max-width: 400px;
+
+  &__head {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+  }
+  &__number {
+    font-size: 35px;
+    background: rgba(0, 0, 0, 0.17);
+    padding: 5px;
+    font-weight: 800;
+    margin-right: 20px;
+  }
+  &__body {
+    padding: 15px;
+  }
+  &__text {
+    font-size: 14px;
+    color: #000;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
 .footer {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -357,6 +384,7 @@
   &__text {
     opacity: $opacity;
     font-size: 18px;
+    margin-bottom: 100px;
   }
 }
 
