@@ -813,6 +813,10 @@ h3 {
     opacity: 0.8;
     font-size: 18px;
     margin-bottom: 100px; }
+  .javascript__card-wrapp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
 
 /*menu*/
 .menu {
