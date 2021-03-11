@@ -773,6 +773,9 @@ h3 {
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease; }
 
+.javascript {
+  background: #101010; }
+
 /*menu*/
 .menu {
   -webkit-box-pack: justify;
