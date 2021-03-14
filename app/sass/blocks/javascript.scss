@@ -1,3 +1,67 @@
 .javascript {
   background: $bgcolor;
+  padding-bottom: 50px;
+  &__title-wrapp {
+    text-align: center;
+  }
+  &__title {
+    text-transform: none;
+    margin-bottom: 20px;
+    span {
+      color: $mainColor;
+    }
+  }
+  &__text {
+    opacity: $opacity;
+    font-size: 18px;
+    margin-bottom: 100px;
+  }
+  &__cards {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &::after {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      border-left: 1px solid $textcolor;
+      opacity: $opacity;
+    }
+  }
+  &__card-wrapp {
+    height: 357px;
+
+    &:nth-child(odd) {
+      margin: 0px 45px 45px 195px;
+      & .card__head:before {
+        left: 110.4%;
+      }
+      & .card__head:after {
+        border-left-width: 15px;
+        border-left-style: solid;
+        left: 100%;
+      }
+    }
+    &:nth-child(even) {
+      margin: 180px 195px 0px 45px;
+      & .card__head:before {
+        right: 110%;
+      }
+      & .card__head:after {
+        border-right-width: 15px;
+        border-right-style: solid;
+        right: 100%;
+      }
+    }
+    &:first-child {
+      margin-top: 45px;
+    }
+    &:last-child {
+      margin-bottom: 45px;
+    }
+  }
 }

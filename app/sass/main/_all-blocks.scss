@@ -1,3 +1,52 @@
+.card {
+  background: #fff;
+  max-width: 400px;
+  height: 100%;
+  &__head {
+    position: relative;
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    background: $mainColor;
+    &::before {
+      position: absolute;
+      content: '';
+      z-index: 3;
+      width: 9px;
+      height: 9px;
+      background-color: $textcolor;
+      border-radius: 9px;
+      box-shadow: 0px 0px 6px 12px $bgcolor;
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 0;
+      border-color: $mainColor;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+    }
+  }
+  &__number {
+    font-size: 35px;
+    background: $bgcolor;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    font-weight: 800;
+    margin-right: 20px;
+  }
+  &__body {
+    padding: 15px;
+  }
+  &__text {
+    font-size: 14px;
+    color: #000;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
 .footer {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -6,7 +55,7 @@
     display: block;
     text-align: center;
     font-size: 15px;
-    opacity: 0.8;
+    opacity: $opacity;
     &:hover {
       opacity: 1;
     }
@@ -34,7 +83,7 @@
     text-align: center;
     font-family: 'Museo Sans Cyrl';
     font-weight: 300;
-    opacity: 0.8;
+    opacity: $opacity;
     span {
       color: #a20916;
     }
@@ -80,7 +129,7 @@
   &__offer-text {
     font-size: 18px;
     color: #c8c8c8;
-    opacity: 0.8;
+    opacity: $opacity;
     max-width: 450px;
     margin-bottom: 35px;
     @include media(992px) {
@@ -164,7 +213,7 @@
   }
   &__text {
     margin-top: 20px;
-    opacity: 0.8;
+    opacity: $opacity;
     font-weight: 300;
     span {
       color: red;
@@ -209,7 +258,7 @@
   }
 
   &__name h1 {
-    font-family: $montserrat;
+    font-family: $font;
     font-size: 49px;
     text-align: center;
     width: 100%;
@@ -226,7 +275,7 @@
   }
 
   &__name h2 {
-    font-family: $opensans;
+    font-family: $font;
     font-size: 29px;
     text-align: center;
     text-transform: none;
@@ -343,6 +392,70 @@
 
 .javascript {
   background: $bgcolor;
+  padding-bottom: 50px;
+  &__title-wrapp {
+    text-align: center;
+  }
+  &__title {
+    text-transform: none;
+    margin-bottom: 20px;
+    span {
+      color: $mainColor;
+    }
+  }
+  &__text {
+    opacity: $opacity;
+    font-size: 18px;
+    margin-bottom: 100px;
+  }
+  &__cards {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &::after {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      border-left: 1px solid $textcolor;
+      opacity: $opacity;
+    }
+  }
+  &__card-wrapp {
+    height: 357px;
+
+    &:nth-child(odd) {
+      margin: 0px 45px 45px 195px;
+      & .card__head:before {
+        left: 110.4%;
+      }
+      & .card__head:after {
+        border-left-width: 15px;
+        border-left-style: solid;
+        left: 100%;
+      }
+    }
+    &:nth-child(even) {
+      margin: 180px 195px 0px 45px;
+      & .card__head:before {
+        right: 110%;
+      }
+      & .card__head:after {
+        border-right-width: 15px;
+        border-right-style: solid;
+        right: 100%;
+      }
+    }
+    &:first-child {
+      margin-top: 45px;
+    }
+    &:last-child {
+      margin-bottom: 45px;
+    }
+  }
 }
 
 /*menu*/
@@ -695,7 +808,7 @@
     text-align: center;
     font-weight: 400;
     font-size: 16px;
-    opacity: 0.8;
+    opacity: $opacity;
     line-height: 25px;
   }
 }
