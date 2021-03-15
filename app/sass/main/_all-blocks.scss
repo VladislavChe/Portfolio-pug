@@ -119,7 +119,9 @@
     max-width: 500px;
     margin-bottom: 25px;
     span {
+      display: block;
       color: $mainColor;
+      margin-top: 20px;
     }
     @include media(992px) {
       margin: 0 auto 25px auto;
@@ -134,7 +136,7 @@
     color: #c8c8c8;
     opacity: $opacity;
     max-width: 450px;
-    margin-bottom: 35px;
+    margin-bottom: 45px;
     @include media(992px) {
       margin: 0 auto 35px auto;
       text-align: center;
@@ -834,20 +836,21 @@
   }
   &__title {
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
     span {
       color: $mainColor;
     }
   }
   &__list {
     justify-content: space-between;
+    flex-wrap: wrap;
     @include media(992px) {
       align-items: center;
       flex-direction: column;
     }
   }
   &__list-item {
-    height: 380px;
+    height: 420px;
     width: 30%;
     padding-top: 30px;
     border-radius: 10px;
@@ -863,6 +866,9 @@
     }
     @include media(768px) {
       width: 90%;
+    }
+    @include media(576px) {
+      height: 440px;
     }
   }
   &__list-icon {

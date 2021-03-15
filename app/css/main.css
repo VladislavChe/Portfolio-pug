@@ -574,7 +574,9 @@ h3 {
     max-width: 500px;
     margin-bottom: 25px; }
     .header-about__offer-title span {
-      color: #c70039; }
+      display: block;
+      color: #c70039;
+      margin-top: 20px; }
     @media only screen and (max-width: 992px) {
       .header-about__offer-title {
         margin: 0 auto 25px auto;
@@ -587,7 +589,7 @@ h3 {
     color: #c8c8c8;
     opacity: 0.8;
     max-width: 450px;
-    margin-bottom: 35px; }
+    margin-bottom: 45px; }
     @media only screen and (max-width: 992px) {
       .header-about__offer-text {
         margin: 0 auto 35px auto;
@@ -1278,13 +1280,15 @@ h3 {
       padding-bottom: 50px; } }
   .skills__title {
     text-align: center;
-    margin-bottom: 100px; }
+    margin-bottom: 70px; }
     .skills__title span {
       color: #c70039; }
   .skills__list {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
     @media only screen and (max-width: 992px) {
       .skills__list {
         -webkit-box-align: center;
@@ -1295,7 +1299,7 @@ h3 {
             -ms-flex-direction: column;
                 flex-direction: column; } }
   .skills__list-item {
-    height: 380px;
+    height: 420px;
     width: 30%;
     padding-top: 30px;
     border-radius: 10px;
@@ -1311,6 +1315,9 @@ h3 {
     @media only screen and (max-width: 768px) {
       .skills__list-item {
         width: 90%; } }
+    @media only screen and (max-width: 576px) {
+      .skills__list-item {
+        height: 440px; } }
   .skills__list-icon {
     display: block;
     text-align: center;
