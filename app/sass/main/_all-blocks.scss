@@ -1,6 +1,6 @@
 .card {
   background: #fff;
-  max-width: 400px;
+  max-width: 355px;
   height: 100%;
   &__head {
     position: relative;
@@ -17,6 +17,9 @@
       background-color: $textcolor;
       border-radius: 9px;
       box-shadow: 0px 0px 6px 12px $bgcolor;
+      @include media(992px) {
+        display: none;
+      }
     }
     &::after {
       position: absolute;
@@ -410,9 +413,15 @@
   }
   &__cards {
     position: relative;
+    max-width: 962px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     flex-wrap: wrap;
+    @include media(992px) {
+      flex-direction: column;
+      align-items: center;
+    }
     &::after {
       content: '';
       z-index: 2;
@@ -425,10 +434,18 @@
     }
   }
   &__card-wrapp {
+    max-width: 355px;
     height: 357px;
-
+    margin-left: 45px;
+    @include media(992px) {
+      z-index: 3;
+      box-shadow: 0px 0px 10px 10px #000;
+    }
     &:nth-child(odd) {
-      margin: 0px 45px 45px 195px;
+      margin: 0px 45px 45px 86px;
+      @include media(992px) {
+        margin: 0;
+      }
       & .card__head:before {
         left: 110.4%;
       }
@@ -436,10 +453,16 @@
         border-left-width: 15px;
         border-left-style: solid;
         left: 100%;
+        @include media(992px) {
+          display: none;
+        }
       }
     }
     &:nth-child(even) {
-      margin: 180px 195px 0px 45px;
+      margin: 180px 45px 0px 36px;
+      @include media(992px) {
+        margin: 70px 0;
+      }
       & .card__head:before {
         right: 110%;
       }
@@ -447,6 +470,9 @@
         border-right-width: 15px;
         border-right-style: solid;
         right: 100%;
+        @include media(992px) {
+          display: none;
+        }
       }
     }
     &:first-child {
