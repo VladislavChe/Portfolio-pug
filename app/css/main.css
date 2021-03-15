@@ -335,7 +335,7 @@ form,
 span,
 ul,
 li {
-  font-family: "Raleway", sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
@@ -347,7 +347,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
   text-transform: uppercase; }
@@ -703,7 +703,7 @@ h3 {
         margin-left: -100.85px;
         margin-top: -33px; } }
   .header__name h1 {
-    font-family: "Raleway", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 49px;
     text-align: center;
     width: 100%;
@@ -718,7 +718,7 @@ h3 {
       .header__name h1 {
         font-size: 18px; } }
   .header__name h2 {
-    font-family: "Raleway", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 29px;
     text-align: center;
     text-transform: none;
