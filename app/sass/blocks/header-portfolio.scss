@@ -3,11 +3,17 @@
   &__wrapp-title {
     text-align: center;
     padding-bottom: 100px;
+    @include media(768px) {
+      padding: 50px 0;
+    }
   }
   &__title {
     text-transform: none;
     span {
       color: $mainColor;
+    }
+    @include media(576px) {
+      font-size: 30px;
     }
   }
   &__text {
@@ -16,6 +22,9 @@
     font-weight: 300;
     span {
       color: red;
+    }
+    @include media(576px) {
+      font-size: 20px;
     }
   }
 }

@@ -42,6 +42,12 @@ h6 {
   text-transform: uppercase;
 }
 
+h1 {
+  @include media(992px) {
+    font-size: 35px;
+  }
+}
+
 address,
 blockquote,
 figure,

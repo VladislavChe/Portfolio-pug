@@ -1,9 +1,11 @@
 .works {
   background: $bgcolor;
   padding-bottom: 100px;
-
   &__row {
     display: flex;
     justify-content: space-around;
+    @include media(992px) {
+      flex-direction: column;
+    }
   }
 }
