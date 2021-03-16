@@ -6,20 +6,21 @@
   }
   &__title {
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
     span {
       color: $mainColor;
     }
   }
   &__list {
     justify-content: space-between;
+    flex-wrap: wrap;
     @include media(992px) {
       align-items: center;
       flex-direction: column;
     }
   }
   &__list-item {
-    height: 380px;
+    height: 420px;
     width: 30%;
     padding-top: 30px;
     border-radius: 10px;
@@ -35,6 +36,9 @@
     }
     @include media(768px) {
       width: 90%;
+    }
+    @include media(576px) {
+      height: 480px;
     }
   }
   &__list-icon {

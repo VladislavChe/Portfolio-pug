@@ -574,7 +574,9 @@ h3 {
     max-width: 500px;
     margin-bottom: 25px; }
     .header-about__offer-title span {
-      color: #c70039; }
+      display: block;
+      color: #c70039;
+      margin-top: 20px; }
     @media only screen and (max-width: 992px) {
       .header-about__offer-title {
         margin: 0 auto 25px auto;
@@ -587,7 +589,7 @@ h3 {
     color: #c8c8c8;
     opacity: 0.8;
     max-width: 450px;
-    margin-bottom: 35px; }
+    margin-bottom: 45px; }
     @media only screen and (max-width: 992px) {
       .header-about__offer-text {
         margin: 0 auto 35px auto;
@@ -1201,9 +1203,9 @@ h3 {
       padding: 0; } }
   .project:hover .project__img,
   .project:hover .project__text {
-    -webkit-transform: translateY(-70%);
-        -ms-transform: translateY(-70%);
-            transform: translateY(-70%);
+    -webkit-transform: translateY(-131%);
+        -ms-transform: translateY(-131%);
+            transform: translateY(-131%);
     -webkit-transition: 0.5s ease-in-out;
     -o-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out; }
@@ -1252,7 +1254,6 @@ h3 {
       font-size: 18px;
       text-align: left;
       margin: 40px auto 0 auto;
-      text-align: center;
       max-width: 85%;
       line-height: 30px;
       opacity: 0.9;
@@ -1278,13 +1279,15 @@ h3 {
       padding-bottom: 50px; } }
   .skills__title {
     text-align: center;
-    margin-bottom: 100px; }
+    margin-bottom: 70px; }
     .skills__title span {
       color: #c70039; }
   .skills__list {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
     @media only screen and (max-width: 992px) {
       .skills__list {
         -webkit-box-align: center;
@@ -1295,7 +1298,7 @@ h3 {
             -ms-flex-direction: column;
                 flex-direction: column; } }
   .skills__list-item {
-    height: 380px;
+    height: 420px;
     width: 30%;
     padding-top: 30px;
     border-radius: 10px;
@@ -1311,6 +1314,9 @@ h3 {
     @media only screen and (max-width: 768px) {
       .skills__list-item {
         width: 90%; } }
+    @media only screen and (max-width: 576px) {
+      .skills__list-item {
+        height: 480px; } }
   .skills__list-icon {
     display: block;
     text-align: center;
