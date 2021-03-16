@@ -1,0 +1,42 @@
+.accordeon {
+  background: $bgcolor;
+  height: 100%;
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid $bgcolor;
+    overflow: hidden;
+  }
+  &__name {
+    background: #bbbbbb;
+    padding: 20px;
+    a {
+      color: blue;
+    }
+  }
+  &__wrapp {
+    background: white;
+    transition: all 0.2s ease-in;
+    height: 0;
+    &.active {
+      transition: all 0.2s ease-in;
+      height: 170px;
+      .accordeon__text {
+        visibility: visible;
+      }
+    }
+  }
+  &__text {
+    color: black;
+    height: 0px;
+    transition: all 0.2s ease-in;
+    box-sizing: content-box;
+    padding: 15px;
+    visibility: hidden;
+  }
+}

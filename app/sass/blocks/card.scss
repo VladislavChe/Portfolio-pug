@@ -6,6 +6,7 @@
     position: relative;
     display: flex;
     padding: 15px;
+    height: 20%;
     align-items: center;
     background: $mainColor;
     &::before {
@@ -41,11 +42,40 @@
   }
   &__body {
     padding: 15px;
+    height: 80%;
+    background: $textcolor;
   }
   &__text {
     font-size: 14px;
     color: #000;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    height: 30%;
+  }
+  &__img {
+    position: relative;
+    display: block;
+    height: 70%;
+    transition: all 0.3s ease;
+    &:hover {
+      svg {
+        transition: all 0.3s ease;
+        path {
+          transition: all 0.3s ease;
+          fill: white;
+          opacity: 1;
+        }
+      }
+    }
+    svg {
+      position: absolute;
+      left: 90%;
+      top: 5%;
+      path {
+        fill: $textcolor;
+        opacity: 0.6;
+      }
+    }
+    img {
+      height: 100%;
+    }
   }
 }

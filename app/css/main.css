@@ -463,6 +463,7 @@ h3 {
     display: -ms-flexbox;
     display: flex;
     padding: 15px;
+    height: 20%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -497,12 +498,39 @@ h3 {
     font-weight: 800;
     margin-right: 20px; }
   .card__body {
-    padding: 15px; }
+    padding: 15px;
+    height: 80%;
+    background: whitesmoke; }
   .card__text {
     font-size: 14px;
     color: #000;
-    margin-top: 15px;
-    margin-bottom: 15px; }
+    height: 30%; }
+  .card__img {
+    position: relative;
+    display: block;
+    height: 70%;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .card__img:hover svg {
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+      .card__img:hover svg path {
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        fill: white;
+        opacity: 1; }
+    .card__img svg {
+      position: absolute;
+      left: 90%;
+      top: 5%; }
+      .card__img svg path {
+        fill: whitesmoke;
+        opacity: 0.6; }
+    .card__img img {
+      height: 100%; }
 
 .footer {
   padding-top: 20px;
@@ -659,6 +687,54 @@ h3 {
       @media only screen and (max-width: 992px) {
         .header-about__offer-foto img {
           display: none; } }
+
+.accordeon {
+  background: #101010;
+  height: 100%; }
+  .accordeon__title {
+    margin-bottom: 40px; }
+  .accordeon__element {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #101010;
+    overflow: hidden; }
+  .accordeon__name {
+    background: #bbbbbb;
+    padding: 20px; }
+    .accordeon__name a {
+      color: blue; }
+  .accordeon__wrapp {
+    background: white;
+    -webkit-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    height: 0; }
+    .accordeon__wrapp.active {
+      -webkit-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+      height: 170px; }
+      .accordeon__wrapp.active .accordeon__text {
+        visibility: visible; }
+  .accordeon__text {
+    color: black;
+    height: 0px;
+    -webkit-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    padding: 15px;
+    visibility: hidden; }
 
 .header-portolio {
   background: #101010; }
