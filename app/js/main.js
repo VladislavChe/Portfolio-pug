@@ -171,17 +171,17 @@ let cube = document.getElementById('generator__cube');
 if (!cube) {
   // console.log('no');
 } else {
-  var rangeTl = document.getElementById('tlr'),
-    rangeTr = document.getElementById('trr'),
-    rangeBl = document.getElementById('blr'),
-    rangeBr = document.getElementById('brr');
+  var rangeTl = document.getElementById('generator__tlr'),
+    rangeTr = document.getElementById('generator__trr'),
+    rangeBl = document.getElementById('generator__blr'),
+    rangeBr = document.getElementById('generator__brr');
 
-  var resultTl = document.getElementById('result-tlr'),
-    resultTr = document.getElementById('result-trr'),
-    resultBl = document.getElementById('result-blr'),
-    resultBr = document.getElementById('result-brr');
+  var resultTl = document.getElementById('generator__result-tlr'),
+    resultTr = document.getElementById('generator__result-trr'),
+    resultBl = document.getElementById('generator__result-blr'),
+    resultBr = document.getElementById('generator__result-brr');
 
-  var inputs = document.querySelectorAll('.input');
+  var inputs = document.querySelectorAll('.generator__input');
 
   function changeRadius() {
     resultTl.innerHTML = rangeTl.value;
@@ -205,15 +205,15 @@ if (!cube) {
     node.addEventListener('input', getCode);
   }
 
-  var btnViewcode = document.getElementById('btn-viewcode'),
-    resultCode = document.getElementById('samecode');
+  var btnViewcode = document.getElementById('generator__btn-viewcode'),
+    resultCode = document.getElementById('generator__samecode');
 
   function getCode() {
     var style = getComputedStyle(cube);
-    resultCode.innerHTML = 'border-radius:' + style.borderRadius;
+    resultCode.innerHTML = 'border-radius: ' + style.borderRadius + ';';
     btnViewcode.addEventListener('click', function () {
-      resultCode.classList.toggle('active');
-      if (resultCode.classList.contains('active')) {
+      resultCode.classList.toggle('generator__active');
+      if (resultCode.classList.contains('generator__active')) {
         btnViewcode.innerHTML = 'Скрыть код';
       } else {
         btnViewcode.innerHTML = 'Показать код';
