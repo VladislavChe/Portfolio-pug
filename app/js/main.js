@@ -149,11 +149,10 @@ if (!pageAccordeon) {
 } else {
   var accordeon = document.querySelectorAll('.accordeon__wrapp'),
     accordeonBtn = document.querySelectorAll('.accordeon__element');
-  console.log(accordeonBtn);
+
   for (var i = 0; i < accordeonBtn.length; i++) {
     accordeonBtn[i].addEventListener('click', function (event) {
       var currBtn = event.target.dataset.btn;
-      console.log(currBtn);
 
       for (var j = 0; j < accordeon.length; j++) {
         if (accordeon[j].classList.contains('active')) {
