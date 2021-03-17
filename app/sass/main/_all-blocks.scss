@@ -1,3 +1,51 @@
+.accordeon {
+  background: $bgcolor;
+  padding-top: 50px;
+  height: 100%;
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid $bgcolor;
+    overflow: hidden;
+  }
+  &__name {
+    background: #bbbbbb;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      color: blue;
+    }
+  }
+  &__wrapp {
+    background: white;
+    transition: all 0.2s ease-in;
+    height: 0;
+    &.active {
+      transition: all 0.2s ease-in;
+      height: 170px;
+      .accordeon__text {
+        visibility: visible;
+      }
+    }
+  }
+  &__text {
+    font-size: 20px;
+    color: black;
+    height: 0px;
+    padding: 15px;
+    box-sizing: content-box;
+    visibility: hidden;
+    transition: all 0.2s ease-in;
+  }
+}
+
 .card {
   background: #fff;
   max-width: 355px;
@@ -93,6 +141,76 @@
       opacity: 1;
     }
   }
+}
+
+.generator {
+  background: $bgcolor;
+  padding-top: 50px;
+  height: 100%;
+  &__title {
+    text-align: center;
+  }
+  &__wrapper {
+    width: 50%;
+    height: 50%;
+    margin: 50px auto 0;
+  }
+  &__top,
+  &__bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__middle {
+    display: flex;
+    justify-content: center;
+  }
+  &__cube {
+    width: 200px;
+    height: 200px;
+    background-color: #0075ff;
+  }
+}
+
+.total-result {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#btn {
+  margin-right: 10px;
+}
+
+.btn-viewcode {
+  width: 150px;
+  height: 25px;
+  background: red;
+  border: 1px solid black;
+  border-radius: 25px;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  margin: 0px auto 50px auto;
+  cursor: pointer;
+}
+
+.resultcode {
+  width: 250px;
+  height: 50px;
+  padding: 5px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.samecode {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.active {
+  display: block;
 }
 
 .header-about {
@@ -232,54 +350,6 @@
     }
   }
   /*offer-End*/
-}
-
-.accordeon {
-  background: $bgcolor;
-  padding-top: 50px;
-  height: 100%;
-  &__title {
-    margin-bottom: 40px;
-  }
-  &__element {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    border-bottom: 1px solid $bgcolor;
-    overflow: hidden;
-  }
-  &__name {
-    background: #bbbbbb;
-    a {
-      display: block;
-      width: 100%;
-      height: 100%;
-      padding: 20px;
-      color: blue;
-    }
-  }
-  &__wrapp {
-    background: white;
-    transition: all 0.2s ease-in;
-    height: 0;
-    &.active {
-      transition: all 0.2s ease-in;
-      height: 170px;
-      .accordeon__text {
-        visibility: visible;
-      }
-    }
-  }
-  &__text {
-    font-size: 20px;
-    color: black;
-    height: 0px;
-    padding: 15px;
-    box-sizing: content-box;
-    visibility: hidden;
-    transition: all 0.2s ease-in;
-  }
 }
 
 .header-portolio {

@@ -1,0 +1,28 @@
+.generator
+  .container 
+    h1.generator__title CSS GENERATOR
+    .generator__wrapper
+      .generator__top
+        .generator__top-left-range
+          input#tlr.input(type='range' min='0' max='100' value='0')
+          #result-tlr.result
+            | 0
+        .generator__top-right-range
+          input#trr.input(type='range' min='0' max='100' value='0')
+          #result-trr.result
+            | 0
+      .generator__middle
+        #generator__cube.generator__cube
+      .generator__bottom
+        .bottom-left-range
+          input#blr.input(type='range' min='0' max='100' value='0')
+          #result-blr.result
+            | 0
+        .bottom-right-range
+          input#brr.input(type='range' min='0' max='100' value='0')
+          #result-brr.result
+            | 0
+      #btn-viewcode.btn-viewcode
+        | Показать код
+      #resultcode.resultcode
+        #samecode.samecode

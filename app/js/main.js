@@ -166,3 +166,59 @@ if (!pageAccordeon) {
 }
 
 /*page-accordeon.html - END*/
+/*page-generator.html - START*/
+let cube = document.getElementById('generator__cube');
+if (!cube) {
+  // console.log('no');
+} else {
+  var rangeTl = document.getElementById('tlr'),
+    rangeTr = document.getElementById('trr'),
+    rangeBl = document.getElementById('blr'),
+    rangeBr = document.getElementById('brr');
+
+  var resultTl = document.getElementById('result-tlr'),
+    resultTr = document.getElementById('result-trr'),
+    resultBl = document.getElementById('result-blr'),
+    resultBr = document.getElementById('result-brr');
+
+  var inputs = document.querySelectorAll('.input');
+
+  function changeRadius() {
+    resultTl.innerHTML = rangeTl.value;
+    resultTr.innerHTML = rangeTr.value;
+    resultBl.innerHTML = rangeBl.value;
+    resultBr.innerHTML = rangeBr.value;
+
+    cube.style.borderRadius =
+      rangeTl.value +
+      'px ' +
+      rangeTr.value +
+      'px ' +
+      rangeBr.value +
+      'px ' +
+      rangeBl.value +
+      'px ';
+  }
+
+  for (node of inputs) {
+    node.addEventListener('input', changeRadius);
+    node.addEventListener('input', getCode);
+  }
+
+  var btnViewcode = document.getElementById('btn-viewcode'),
+    resultCode = document.getElementById('samecode');
+
+  function getCode() {
+    var style = getComputedStyle(cube);
+    resultCode.innerHTML = 'border-radius:' + style.borderRadius;
+    btnViewcode.addEventListener('click', function () {
+      resultCode.classList.toggle('active');
+      if (resultCode.classList.contains('active')) {
+        btnViewcode.innerHTML = 'Скрыть код';
+      } else {
+        btnViewcode.innerHTML = 'Показать код';
+      }
+    });
+  }
+}
+/*page-generator.html - END*/
