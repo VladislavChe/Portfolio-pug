@@ -524,7 +524,7 @@ h3 {
         opacity: 1; }
     .card__img svg {
       position: absolute;
-      left: 90%;
+      left: 91%;
       top: 5%; }
       .card__img svg path {
         fill: whitesmoke;
@@ -690,6 +690,7 @@ h3 {
 
 .accordeon {
   background: #101010;
+  padding-top: 50px;
   height: 100%; }
   .accordeon__title {
     margin-bottom: 40px; }
@@ -708,9 +709,12 @@ h3 {
     border-bottom: 1px solid #101010;
     overflow: hidden; }
   .accordeon__name {
-    background: #bbbbbb;
-    padding: 20px; }
+    background: #bbbbbb; }
     .accordeon__name a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
       color: blue; }
   .accordeon__wrapp {
     background: white;
@@ -726,15 +730,16 @@ h3 {
       .accordeon__wrapp.active .accordeon__text {
         visibility: visible; }
   .accordeon__text {
+    font-size: 20px;
     color: black;
     height: 0px;
-    -webkit-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
+    padding: 15px;
     -webkit-box-sizing: content-box;
             box-sizing: content-box;
-    padding: 15px;
-    visibility: hidden; }
+    visibility: hidden;
+    -webkit-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in; }
 
 .header-portolio {
   background: #101010; }
