@@ -2,14 +2,17 @@
   background: $bgcolor;
   padding-top: 50px;
   height: 100%;
+  &__w {
+    height: 100%;
+  }
   &__title {
     margin-bottom: 40px;
+    text-align: center;
   }
   &__element {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
     border-bottom: 1px solid $bgcolor;
     overflow: hidden;
   }
@@ -21,27 +24,27 @@
       height: 100%;
       padding: 20px;
       color: blue;
+      @include media(576px) {
+        font-size: 16px;
+      }
     }
   }
   &__wrapp {
     background: white;
-    transition: all 0.2s ease-in;
-    height: 0;
+    height: auto;
+    max-height: 0;
+    transition: max-height 1s;
+
     &.active {
-      transition: all 0.2s ease-in;
-      height: 170px;
-      .accordeon__text {
-        visibility: visible;
-      }
+      max-height: 500px;
     }
   }
   &__text {
-    font-size: 20px;
     color: black;
-    height: 0px;
-    padding: 15px;
-    box-sizing: content-box;
-    visibility: hidden;
     transition: all 0.2s ease-in;
+    box-sizing: content-box;
+    padding: 15px;
+    visibility: visible;
+    padding: 15px;
   }
 }

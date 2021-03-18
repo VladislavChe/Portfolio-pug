@@ -457,8 +457,11 @@ h3 {
   background: #101010;
   padding-top: 50px;
   height: 100%; }
+  .accordeon__w {
+    height: 100%; }
   .accordeon__title {
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    text-align: center; }
   .accordeon__element {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -470,7 +473,6 @@ h3 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 100%;
     border-bottom: 1px solid #101010;
     overflow: hidden; }
   .accordeon__name {
@@ -481,30 +483,28 @@ h3 {
       height: 100%;
       padding: 20px;
       color: blue; }
+      @media only screen and (max-width: 576px) {
+        .accordeon__name a {
+          font-size: 16px; } }
   .accordeon__wrapp {
     background: white;
+    height: auto;
+    max-height: 0;
+    -webkit-transition: max-height 1s;
+    -o-transition: max-height 1s;
+    transition: max-height 1s; }
+    .accordeon__wrapp.active {
+      max-height: 500px; }
+  .accordeon__text {
+    color: black;
     -webkit-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
-    height: 0; }
-    .accordeon__wrapp.active {
-      -webkit-transition: all 0.2s ease-in;
-      -o-transition: all 0.2s ease-in;
-      transition: all 0.2s ease-in;
-      height: 170px; }
-      .accordeon__wrapp.active .accordeon__text {
-        visibility: visible; }
-  .accordeon__text {
-    font-size: 20px;
-    color: black;
-    height: 0px;
-    padding: 15px;
     -webkit-box-sizing: content-box;
             box-sizing: content-box;
-    visibility: hidden;
-    -webkit-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in; }
+    padding: 15px;
+    visibility: visible;
+    padding: 15px; }
 
 .card {
   background: #fff;
