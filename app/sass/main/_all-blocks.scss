@@ -150,14 +150,19 @@
   background: $bgcolor;
   padding-top: 50px;
   padding-bottom: 50px;
-  height: 100%;
+  width: 100%;
   &__title {
     text-align: center;
   }
   &__wrapper {
     width: 50%;
-    height: 50%;
     margin: 50px auto;
+    @include media(992px) {
+      width: 70%;
+    }
+    @include media(768px) {
+      width: 100%;
+    }
   }
   &__top,
   &__bottom {
@@ -165,13 +170,19 @@
     display: flex;
     justify-content: space-between;
   }
+  &__input {
+    @include media(576px) {
+      width: 90px;
+    }
+  }
   &__middle {
     display: flex;
     justify-content: center;
+    margin: 50px 0;
   }
   &__cube {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     background-color: #0075ff;
   }
   &__btn-viewcode {
@@ -189,7 +200,6 @@
     width: 100%;
     height: 50px;
     padding: 5px;
-    border: 1px solid black;
     text-align: center;
   }
   &__samecode {
