@@ -31,12 +31,12 @@
   }
   &__wrapp {
     background: white;
-    height: auto;
-    max-height: 0;
-    transition: max-height 1s;
-
-    &.active {
-      max-height: 500px;
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 0.2s ease-out;
+    font-size: 22px;
+    @include media(768px) {
+      font-size: 18px;
     }
   }
   &__text {

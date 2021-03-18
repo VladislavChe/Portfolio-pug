@@ -488,13 +488,15 @@ h3 {
           font-size: 16px; } }
   .accordeon__wrapp {
     background: white;
-    height: auto;
-    max-height: 0;
-    -webkit-transition: max-height 1s;
-    -o-transition: max-height 1s;
-    transition: max-height 1s; }
-    .accordeon__wrapp.active {
-      max-height: 500px; }
+    overflow: hidden;
+    max-height: 0px;
+    -webkit-transition: max-height 0.2s ease-out;
+    -o-transition: max-height 0.2s ease-out;
+    transition: max-height 0.2s ease-out;
+    font-size: 22px; }
+    @media only screen and (max-width: 768px) {
+      .accordeon__wrapp {
+        font-size: 18px; } }
   .accordeon__text {
     color: black;
     -webkit-transition: all 0.2s ease-in;

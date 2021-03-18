@@ -155,10 +155,12 @@ if (!pageAccordeon) {
       var currBtn = event.target.dataset.btn;
 
       for (var j = 0; j < accordeon.length; j++) {
-        if (accordeon[j].classList.contains('active')) {
-          accordeon[j].classList.remove('active');
-        } else if (accordeon[j].dataset.content === currBtn) {
-          accordeon[j].classList.add('active');
+        if (accordeon[j].style.maxHeight) {
+          accordeon[j].style.maxHeight = null;
+        } else {
+          if (accordeon[j].dataset.content === currBtn) {
+            accordeon[j].style.maxHeight = accordeon[j].scrollHeight + 'px';
+          }
         }
       }
     });
