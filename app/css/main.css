@@ -1639,6 +1639,19 @@ h3 {
   .slider #slider__btn-prev,
   .slider #slider__btn-next {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 80px;
     width: 50px;
     background: white;
@@ -1652,8 +1665,7 @@ h3 {
       opacity: 0.4; }
     .slider #slider__btn-prev svg,
     .slider #slider__btn-next svg {
-      width: 50px;
-      height: 80px; }
+      width: 50px; }
       .slider #slider__btn-prev svg path,
       .slider #slider__btn-next svg path {
         fill: #c70039; }
