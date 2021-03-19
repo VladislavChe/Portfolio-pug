@@ -224,3 +224,74 @@ if (!cube) {
   }
 }
 /*page-generator.html - END*/
+
+/*page-calculator.html - START*/
+const pageCalculator = document.getElementsByClassName('calculator__title');
+if (!pageCalculator) {
+  // console.log('no');
+} else {
+  var btn = document.querySelectorAll('.calculator__wrapp-input'),
+    plans = document.querySelectorAll('.calculator__selected-plan'),
+    inputs = document.querySelectorAll('.calculator__price-input'),
+    numbers = document.getElementById('calculator__numb');
+
+  function activePlan(el) {
+    for (var i = 0; i < btn.length; i++) {
+      btn[i].classList.remove('calculator__active');
+    }
+    el.classList.add('calculator__active');
+  }
+
+  btn.forEach((element) => {
+    element.addEventListener('click', function (event) {
+      activePlan(element);
+
+      var currInput = this.dataset.input;
+
+      for (var j = 0; j < plans.length; j++) {
+        plans[j].classList.remove('calculator__active');
+        if (plans[j].dataset.plan === currInput) {
+          plans[j].classList.add('calculator__active');
+        }
+      }
+    });
+  });
+
+  inputs.forEach((input) => {
+    input.addEventListener('change', (e) => {
+      var inputNumb = +input.value;
+
+      summ(inputNumb);
+    });
+  });
+
+  var op = document.getElementById('calculator__op');
+
+  function summ(a) {
+    if (numbers.value == 10) {
+      totalSumm(staticOptionNumb * a);
+    }
+
+    var optionNumb = +numbers.value;
+
+    var total = a * optionNumb;
+
+    totalSumm(total);
+
+    numbers.addEventListener('change', () => {
+      var optionNumb = +numbers.value;
+
+      var total = a * optionNumb;
+
+      totalSumm(total);
+    });
+  }
+
+  var totality = document.querySelector('.calculator__total-price');
+  var staticOptionNumb = 10;
+
+  function totalSumm(sum) {
+    totality.innerHTML = sum;
+  }
+}
+/*page-calculator.html - END*/

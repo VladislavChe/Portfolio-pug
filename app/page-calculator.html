@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Дело которым я живу">
+  <meta name="keywords" content="дело которым я живу, мое портфолио, мои навыки, верстка, верстка frontend, мои навыки, мои работы">
+  <!-- Favicon-->
+  <!--
+  <link rel="icon" href="img/waterfall.jpg" type="image/x-icon" />
+  <link rel="shortcut icon" href="img/ilustration.ico" type="image/x-icon" />
+  -->
+  <!-- OG Tags-->
+  <meta property="og:title" content="Дело которым я живу">
+  <meta property="og:description" content="Дело которым я живу, 75 реализованных проектов, 154 положительных отзыва, о заслугах, 8 лет опыта, мои контакты, не стесняйтесь пишите">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="#">
+  <meta property="og:site_name" content="Мое портфолио">
+  <!-- adaptability-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&amp;display=swap" rel="stylesheet">
+  <!-- CSS styles-->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="calculator">
+    <div class="container">
+      <h1 class="calculator__title">Calculator</h1>
+      <form class="calculator__plan" action="#">
+        <div class="calculator__wrapp-inputs" id="calculator__wrapp-inputs">
+          <label class="calculator__wrapp-input" for="calculator__radio1" data-input="1">
+            <div class="calculator__radio-wrapp">
+              <input class="calculator__price-input" id="calculator__radio1" name="chose" type="radio" value="13">
+              <p class="calculator__input-text"> license plan #1</p>
+            </div>
+            <p class="calculator__input-price">$<span>13</span> per license</p>
+          </label>
+          <label class="calculator__wrapp-input" for="calculator__radio2" data-input="2">
+            <div class="calculator__radio-wrapp">
+              <input class="calculator__price-input" id="calculator__radio2" name="chose" type="radio" value="22">
+              <p class="calculator__input-text">license plan #2</p>
+            </div>
+            <p class="calculator__input-price">$<span>22</span> per license</p>
+          </label>
+          <label class="calculator__wrapp-input calculator__active" for="calculator__radio3" data-input="3">
+            <div class="calculator__radio-wrapp">
+              <input class="calculator__price-input" id="calculator__radio3" checked="" name="chose" type="radio" value="34">
+              <p class="calculator__input-text">license plan #3</p>
+            </div>
+            <p class="calculator__input-price">$<span>34</span> per license</p>
+          </label>
+        </div>
+        <div class="calculator__wrapp-number-licenses">
+          <p class="calculator__text-number-license">Number of licenses:</p>
+          <select id="calculator__numb" name="numbers">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option id="calculator__op" selected="" value="10">10</option>
+          </select>
+        </div>
+        <div class="calculator__wrapper-total">
+          <p class="calculator__total-text">total: <span class="calculator__total-dollar">$</span><span class="calculator__total-price">340</span><span class="calculator__total-us">us</span></p><a class="calculator__total-btn" type="submit">buy now</a>
+        </div>
+        <div class="calculator__wrapp-selected-plan">
+          <p class="calculator__selected-plan" data-plan="1">Selected plan: #1</p>
+          <p class="calculator__selected-plan" data-plan="2">Selected plan: #2</p>
+          <p class="calculator__selected-plan calculator__active" data-plan="3">Selected plan: #3</p>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>

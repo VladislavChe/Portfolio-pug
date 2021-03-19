@@ -1,0 +1,58 @@
+.calculator
+  .container
+    h1.calculator__title Calculator
+    form.calculator__plan(action='#')
+      #calculator__wrapp-inputs.calculator__wrapp-inputs
+        label.calculator__wrapp-input(for='calculator__radio1' data-input='1')
+          .calculator__radio-wrapp
+            input#calculator__radio1.calculator__price-input(name='chose' type='radio' value='13')
+            p.calculator__input-text  license plan #1
+          p.calculator__input-price
+            | $
+            span 13
+            |  per license
+        label.calculator__wrapp-input(for='calculator__radio2' data-input='2')
+          .calculator__radio-wrapp
+            input#calculator__radio2.calculator__price-input(name='chose' type='radio' value='22')
+            p.calculator__input-text license plan #2
+          p.calculator__input-price
+            | $
+            span 22
+            |  per license
+        label.calculator__wrapp-input.calculator__active(for='calculator__radio3' data-input='3')
+          .calculator__radio-wrapp
+            input#calculator__radio3.calculator__price-input(checked='' name='chose' type='radio' value='34')
+            p.calculator__input-text license plan #3
+          p.calculator__input-price
+            | $
+            span 34
+            |  per license
+      .calculator__wrapp-number-licenses
+        p.calculator__text-number-license
+          | Number of licenses:
+        select#calculator__numb(name='numbers')
+          option(value='1') 1
+          option(value='2') 2
+          option(value='3') 3
+          option(value='4') 4
+          option(value='5') 5
+          option(value='6') 6
+          option(value='7') 7
+          option(value='8') 8
+          option(value='9') 9
+          option#calculator__op(selected='' value='10') 10
+      .calculator__wrapper-total
+        p.calculator__total-text
+          | total: 
+          span.calculator__total-dollar $
+          span.calculator__total-price 340
+          span.calculator__total-us us
+        a.calculator__total-btn(type='submit')
+          | buy now
+      .calculator__wrapp-selected-plan
+        p.calculator__selected-plan(data-plan='1')
+          | Selected plan: #1
+        p.calculator__selected-plan(data-plan='2')
+          | Selected plan: #2
+        p.calculator__selected-plan.calculator__active(data-plan='3')
+          | Selected plan: #3

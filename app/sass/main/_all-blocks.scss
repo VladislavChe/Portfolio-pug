@@ -49,6 +49,124 @@
   }
 }
 
+.calculator {
+  background: $bgcolor;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: 100%;
+  &__title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  form {
+    max-width: 400px;
+    background: #f8f8f8;
+    padding: 10px;
+    border: 5px solid #cbcbcb;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 0px 16px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 16px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 16px -6px rgba(0, 0, 0, 0.75);
+  }
+  &__wrapp-input {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 20px;
+    &.calculator__active {
+      background: #a6e5f7;
+    }
+    &:hover {
+      background: #a6e5f7;
+    }
+    @include media(576px) {
+      padding: 10px 0px 10px 10px;
+    }
+  }
+  &__radio-wrapp {
+    display: flex;
+  }
+  &__input-text {
+    color: #777777;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 20px;
+    @include media(576px) {
+      font-size: 14px;
+      margin-left: 10px;
+    }
+  }
+  &__input-price {
+    color: #979fa2;
+    font-size: 12px;
+  }
+  &__selected-plan {
+    display: none;
+    color: #8ce5f7;
+    text-align: center;
+    font-size: 12px;
+    &.calculator__active {
+      display: block;
+    }
+  }
+  &__wrapp-number-licenses {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #e6e6e5;
+    border-bottom: 1px solid #e6e6e5;
+    padding: 20px 0;
+    align-items: center;
+  }
+  &__text-number-license {
+    color: #777777;
+    font-size: 12px;
+    margin-right: 10px;
+  }
+  select {
+    font-size: 12px;
+  }
+  &__wrapper-total {
+    padding: 40px 0;
+    margin: 0 auto;
+    max-width: 200px;
+  }
+  &__total-text {
+    display: flex;
+    color: #7e7e7e;
+    text-transform: uppercase;
+    font-weight: bold;
+    justify-content: center;
+    span {
+      color: #8ce5f7;
+      font-weight: bold;
+    }
+  }
+  &__total-dollar {
+    color: #8ce5f7;
+    align-items: flex-start;
+    margin-left: 5px;
+  }
+  &__total-us {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  &__total-btn {
+    display: block;
+    max-width: 160px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    border-radius: 25px;
+    padding: 10px 10px;
+    background: #31a845;
+    color: white;
+    text-align: center;
+    margin: 20px auto 0;
+    font-size: 13px;
+    cursor: pointer;
+  }
+}
+
 .card {
   background: #fff;
   max-width: 355px;
