@@ -295,3 +295,80 @@ if (!pageCalculator) {
   }
 }
 /*page-calculator.html - END*/
+
+/*page-slider.html - START*/
+const pageSlider = document.getElementsByClassName('slider__title');
+if (!pageSlider) {
+  // console.log('no');
+} else {
+  var slides = document.querySelectorAll('.slider__slide'),
+    btnPrev = document.getElementById('slider__btn-prev'),
+    btnNext = document.getElementById('slider__btn-next'),
+    dots = document.querySelectorAll('.dot');
+
+  var indexSlide = 0;
+
+  function activeSlide(n) {
+    for (slide of slides) {
+      slide.classList.remove('slider__active');
+    }
+
+    slides[n].classList.add('slider__active');
+  }
+
+  function nextSlide() {
+    if (indexSlide == slides.length - 1) {
+      indexSlide = 0;
+      activeSlide(indexSlide);
+      changeDot(indexSlide);
+    } else {
+      indexSlide++;
+      activeSlide(indexSlide);
+      changeDot(indexSlide);
+    }
+  }
+
+  function prevSlide() {
+    if (indexSlide == 0) {
+      indexSlide = slides.length - 1;
+      activeSlide(indexSlide);
+      changeDot(indexSlide);
+    } else {
+      indexSlide--;
+      activeSlide(indexSlide);
+      changeDot(indexSlide);
+    }
+  }
+
+  btnNext.addEventListener('click', nextSlide);
+  btnPrev.addEventListener('click', prevSlide);
+
+  function changeDot(d) {
+    for (dot of dots) {
+      dot.classList.remove('slider__active');
+      dots[d].classList.add('slider__active');
+    }
+  }
+
+  function activeDot(act) {
+    for (var i = 0; i < dots.length; i++) {
+      dots[i].classList.remove('slider__active');
+    }
+    act.classList.add('slider__active');
+  }
+
+  dots.forEach((dot) => {
+    dot.addEventListener('click', function (event) {
+      var currDot = event.target.dataset.dot;
+      activeDot(event.target);
+
+      for (var j = 0; j < slides.length; j++) {
+        slides[j].classList.remove('slider__active');
+        if (slides[j].dataset.slide === currDot) {
+          slides[j].classList.add('slider__active');
+        }
+      }
+    });
+  });
+}
+/*page-slider.html - END*/
