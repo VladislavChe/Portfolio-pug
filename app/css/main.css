@@ -1535,6 +1535,7 @@ h3 {
 
 .skills {
   background: #101010;
+  padding-top: 100px;
   padding-bottom: 100px; }
   @media only screen and (max-width: 992px) {
     .skills {
@@ -1562,7 +1563,7 @@ h3 {
   .skills__list-item {
     height: 420px;
     width: 30%;
-    padding-top: 30px;
+    padding: 30px 10px 10px 10px;
     border-radius: 10px;
     -webkit-animation: opacity 1.4s ease;
             animation: opacity 1.4s ease;
@@ -1614,21 +1615,32 @@ h3 {
   background: #101010;
   padding-top: 50px;
   padding-bottom: 50px;
-  width: 100%;
-  min-height: 100%; }
+  width: 100%; }
+  @media only screen and (max-width: 576px) {
+    .slider {
+      height: 100%; } }
   .slider__title {
+    height: 20%;
     text-align: center;
     margin-bottom: 50px; }
   .slider__slider-wrapper {
+    position: relative;
     width: 50%;
     height: 400px;
-    position: relative;
     margin: 0 auto;
     -webkit-box-shadow: 0px 0px 7px 3px #c4c4c4;
             box-shadow: 0px 0px 7px 3px #c4c4c4; }
+    @media only screen and (max-width: 992px) {
+      .slider__slider-wrapper {
+        width: 90%; } }
+    @media only screen and (max-width: 576px) {
+      .slider__slider-wrapper {
+        width: 90%;
+        height: 250px; } }
   .slider__slide {
-    display: none;
     position: absolute;
+    top: 0;
+    display: none;
     width: 100%;
     height: 100%;
     -webkit-touch-callout: none;
@@ -1645,6 +1657,8 @@ h3 {
   .slider #slider__btn-prev,
   .slider #slider__btn-next {
     position: absolute;
+    top: 50%;
+    margin-top: -40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1661,14 +1675,14 @@ h3 {
     height: 80px;
     width: 50px;
     background: white;
-    opacity: 0.8;
+    opacity: 0.4;
     cursor: pointer;
     -webkit-transition: opacity 0.2s ease-in-out;
     -o-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out; }
     .slider #slider__btn-prev:hover,
     .slider #slider__btn-next:hover {
-      opacity: 0.4; }
+      opacity: 0.8; }
     .slider #slider__btn-prev svg,
     .slider #slider__btn-next svg {
       width: 50px; }
@@ -1676,10 +1690,8 @@ h3 {
       .slider #slider__btn-next svg path {
         fill: #c70039; }
   .slider #slider__btn-prev {
-    left: 0;
-    top: 160px; }
+    left: 0; }
   .slider #slider__btn-next {
-    top: 160px;
     right: 0; }
   .slider__dots-wrapper {
     display: -webkit-box;

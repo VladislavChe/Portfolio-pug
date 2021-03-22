@@ -226,7 +226,7 @@ if (!cube) {
 /*page-generator.html - END*/
 
 /*page-calculator.html - START*/
-const pageCalculator = document.getElementsByClassName('calculator__title');
+const pageCalculator = document.querySelector('.calculator__title');
 if (!pageCalculator) {
   // console.log('no');
 } else {
@@ -297,7 +297,7 @@ if (!pageCalculator) {
 /*page-calculator.html - END*/
 
 /*page-slider.html - START*/
-const pageSlider = document.getElementsByClassName('slider__title');
+const pageSlider = document.querySelector('.slider__title');
 if (!pageSlider) {
   // console.log('no');
 } else {

@@ -3,21 +3,33 @@
   padding-top: 50px;
   padding-bottom: 50px;
   width: 100%;
-  min-height: 100%;
+  @include media(576px) {
+    height: 100%;
+  }
   &__title {
+    height: 20%;
     text-align: center;
     margin-bottom: 50px;
   }
+
   &__slider-wrapper {
+    position: relative;
     width: 50%;
     height: 400px;
-    position: relative;
     margin: 0 auto;
     box-shadow: 0px 0px 7px 3px rgba(196, 196, 196, 1);
+    @include media(992px) {
+      width: 90%;
+    }
+    @include media(576px) {
+      width: 90%;
+      height: 250px;
+    }
   }
   &__slide {
-    display: none;
     position: absolute;
+    top: 0;
+    display: none;
     width: 100%;
     height: 100%;
     -webkit-touch-callout: none;
@@ -39,6 +51,8 @@
   #slider__btn-prev,
   #slider__btn-next {
     position: absolute;
+    top: 50%;
+    margin-top: -40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,11 +60,11 @@
     height: 80px;
     width: 50px;
     background: white;
-    opacity: 0.8;
+    opacity: 0.4;
     cursor: pointer;
     transition: opacity 0.2s ease-in-out;
     &:hover {
-      opacity: 0.4;
+      opacity: 0.8;
     }
     svg {
       width: 50px;
@@ -62,10 +76,8 @@
   }
   #slider__btn-prev {
     left: 0;
-    top: 160px;
   }
   #slider__btn-next {
-    top: 160px;
     right: 0;
   }
   // &__prev {
