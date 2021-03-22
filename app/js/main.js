@@ -401,3 +401,24 @@ if (!pageTabs) {
   }
 }
 /*page-tabs.html - END*/
+/*page-map.html - START*/
+const pageMap = document.querySelector('.map__title');
+if (!pageMap) {
+  // console.log('no');
+} else {
+  var scalle = document.querySelector('.map__inner-scalle'),
+    bgScalle = document.querySelector('.map__bg-scalle'),
+    map = document.querySelector('.map__mini-map');
+
+  bgScalle.style.width = 0 + 'px';
+  map.style.width = 50 + 'px';
+  map.style.height = 50 + 'px';
+
+  scalle.addEventListener('mousemove', function (event) {
+    bgScalle.style.width = event.offsetX + 'px';
+
+    map.style.width = event.offsetX + 0 + 'px';
+    map.style.height = event.offsetX + 0 + 'px';
+  });
+}
+/*page-map.html - END*/
