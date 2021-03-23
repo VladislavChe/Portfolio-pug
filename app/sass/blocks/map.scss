@@ -34,7 +34,7 @@
     height: 15px;
   }
   &__bg-scalle {
-    width: 0px;
+    width: 50px;
     max-width: 300px;
     height: 10px;
     background: $mainColor;
@@ -50,6 +50,7 @@
   &__scalle-minuse {
     font-size: 40px;
     font-weight: bold;
+    cursor: pointer;
   }
   &__inner-map {
     min-width: 50px;

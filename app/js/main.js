@@ -406,19 +406,44 @@ const pageMap = document.querySelector('.map__title');
 if (!pageMap) {
   // console.log('no');
 } else {
-  var scalle = document.querySelector('.map__inner-scalle'),
+  let scalle = document.querySelector('.map__inner-scalle'),
     bgScalle = document.querySelector('.map__bg-scalle'),
-    map = document.querySelector('.map__mini-map');
+    plus = document.querySelector('.map__scalle-plus'),
+    minuse = document.querySelector('.map__scalle-minuse');
+  map = document.querySelector('.map__mini-map');
 
-  bgScalle.style.width = 0 + 'px';
+  bgScalle.style.width = 50 + 'px';
   map.style.width = 50 + 'px';
   map.style.height = 50 + 'px';
-
+  let counter = 50;
   scalle.addEventListener('mousemove', function (event) {
-    bgScalle.style.width = event.offsetX + 'px';
+    if (event.offsetX >= 50) {
+      counter = event.offsetX;
 
-    map.style.width = event.offsetX + 0 + 'px';
-    map.style.height = event.offsetX + 0 + 'px';
+      bgScalle.style.width = event.offsetX + 'px';
+
+      map.style.width = event.offsetX + 0 + 'px';
+      map.style.height = event.offsetX + 0 + 'px';
+    }
+  });
+
+  plus.addEventListener('click', function () {
+    if (counter >= 50) {
+      counter += 10;
+
+      bgScalle.style.width = counter + 'px';
+      map.style.width = counter + 'px';
+      map.style.height = counter + 'px';
+    }
+  });
+  minuse.addEventListener('click', function () {
+    if (counter >= 51) {
+      counter -= 10;
+
+      bgScalle.style.width = counter + 'px';
+      map.style.width = counter + 'px';
+      map.style.height = counter + 'px';
+    }
   });
 }
 /*page-map.html - END*/
