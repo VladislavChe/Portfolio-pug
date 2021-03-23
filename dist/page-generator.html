@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Дело которым я живу">
+  <meta name="keywords" content="дело которым я живу, мое портфолио, мои навыки, верстка, верстка frontend, мои навыки, мои работы">
+  <!-- Favicon-->
+  <!--
+  <link rel="icon" href="img/waterfall.jpg" type="image/x-icon" />
+  <link rel="shortcut icon" href="img/ilustration.ico" type="image/x-icon" />
+  -->
+  <!-- OG Tags-->
+  <meta property="og:title" content="Дело которым я живу">
+  <meta property="og:description" content="Дело которым я живу, 75 реализованных проектов, 154 положительных отзыва, о заслугах, 8 лет опыта, мои контакты, не стесняйтесь пишите">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="#">
+  <meta property="og:site_name" content="Мое портфолио">
+  <!-- adaptability-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&amp;display=swap" rel="stylesheet">
+  <!-- CSS styles-->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="generator">
+    <div class="container">
+      <h1 class="generator__title">CSS GENERATOR</h1>
+      <div class="generator__wrapper">
+        <div class="generator__top">
+          <div class="generator__top-left-range">
+            <input class="generator__input" id="generator__tlr" type="range" min="0" max="100" value="0">
+            <div class="generator__result" id="generator__result-tlr">0</div>
+          </div>
+          <div class="generator__top-right-range">
+            <input class="generator__input" id="generator__trr" type="range" min="0" max="100" value="0">
+            <div class="generator__result" id="generator__result-trr">0</div>
+          </div>
+        </div>
+        <div class="generator__middle">
+          <div class="generator__cube" id="generator__cube"></div>
+        </div>
+        <div class="generator__bottom">
+          <div class="generator__bottom-left-range">
+            <input class="generator__input" id="generator__blr" type="range" min="0" max="100" value="0">
+            <div class="generator__result" id="generator__result-blr">0</div>
+          </div>
+          <div class="generator__bottom-right-range">
+            <input class="generator__input" id="generator__brr" type="range" min="0" max="100" value="0">
+            <div class="generator__result" id="generator__result-brr">0</div>
+          </div>
+        </div>
+        <div class="generator__btn-viewcode" id="generator__btn-viewcode">Показать код</div>
+        <div class="generator__resultcode" id="generator__resultcode">
+          <div class="generator__samecode" id="generator__samecode"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>

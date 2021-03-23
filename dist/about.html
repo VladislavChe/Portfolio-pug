@@ -21,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Fonts-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;family=Open+Sans:wght@400;800&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&amp;display=swap" rel="stylesheet">
   <!-- CSS styles-->
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -31,32 +31,33 @@
       <div class="container">
         <div class="burger-menu__inner-wrapp">
           <div class="burger-menu__logo" id="logo">
-            <div class="burger-menu__logo-wrapp d-flex" id="logo-wrapp"><span class="burger-menu__logo-letters">CH</span></div>
+            <div class="burger-menu__logo-wrapp d-flex" id="logo-wrapp"><a class="burger-menu__logo-letters" href="index.html">CH </a></div>
           </div>
           <div class="burger-menu__close" id="close-burger"><span></span></div>
         </div>
         <ul class="burger-menu__menu-list">
           <li class="burger-menu__item"><a class="burger-menu__link" href="index.html">Home</a></li>
           <li class="burger-menu__item"><a class="burger-menu__link" href="about.html">About</a></li>
-          <li class="burger-menu__item"><a class="burger-menu__link" href="#">Portfolio</a></li>
+          <li class="burger-menu__item"><a class="burger-menu__link" href="portfolio.html">Portfolio</a></li>
         </ul>
       </div>
     </div>
     <div class="container">
       <div class="menu d-flex">
         <div class="menu__logo" id="logo">
-          <div class="menu__logo-wrapp d-flex" id="logo-wrapp"><span class="menu__logo-letters">CH</span></div>
+          <div class="menu__logo-wrapp d-flex" id="logo-wrapp"><a class="menu__logo-letters" href="index.html">CH </a></div>
         </div>
         <div class="menu__hamburger pos-a" id="hamburger"><span></span></div>
       </div>
       <div class="header-about__wrapper-title">
-        <h1 class="header-about__title">About <span>Me</span></h1>
-        <p class="header-about__text">Get to Know <span>me...</span></p>
+        <h1 class="header-about__title">Обо <span>Мне</span></h1>
+        <p class="header-about__text">Узнать обо <span>мне...</span></p>
       </div>
       <div class="header-about__wrapper-offer d-flex">
         <div class="header-about__offer">
-          <h2 class="header-about__offer-title">I'm creative <span>web developer </span>based in New York , USA</h2>
-          <p class="header-about__offer-text">With 20 years of experience as a professional Web developer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step while working.</p><a class="header-about__offer-btn" href="#">Узнать больше</a>
+          <h2 class="header-about__offer-title">
+            Здавствуйте! Меня зовут Владислав и я... <span>Веб-разработчик</span></h2>
+          <p class="header-about__offer-text">Мои практические навыки веб-разработки и создания реальных сайтов, будут полезны вашему проекту. Мне нравится развиваться, получать новые знания и опыт.</p><a class="header-about__offer-btn" href="#">Узнать больше</a>
         </div>
         <div class="header-about__offer-foto d-flex"><img src="img/src/avatar.png" alt=""></div>
       </div>
@@ -64,23 +65,101 @@
   </header>
   <div class="skills">
     <div class="container">
-      <h2 class="skills-title">Мои навыки</h2>
-      <ul class="skills-list d-flex">
-        <li class="skills-list__item"><img class="skills-list__icon" src="#" alt="">
-          <h3 class="skills-list__title">Lorem ipsum</h3>
-          <p class="skills-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni incidunt accusantium</p>
+      <h2 class="skills__title"> <span>Мои </span>навыки</h2>
+      <ul class="skills__list d-flex">
+        <li class="skills__list-item">
+          <div class="skills__list-icon">
+            <svg width="1792" height="1792" viewbox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1322 597l16-175h-884l47 534h612l-22 228-197 53-196-53-13-140h-175l22 278 362 100h4v-1l359-99 50-544h-644l-15-181h674zm-1130-469h1408l-128 1438-578 162-574-162z"></path>
+            </svg>
+          </div>
+          <h3 class="skills__list-title">HTML5</h3>
+          <p class="skills__list-text">Уверенные знания языка разметки, валидная, кроссбраузерная, адаптивная верстка по макетам для различных браузеров и мобильных устройств.</p>
         </li>
-        <li class="skills-list__item"><img class="skills-list__icon" src="#" alt="">
-          <h3 class="skills-list__title">Lorem ipsum</h3>
-          <p class="skills-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni incidunt accusantium</p>
+        <li class="skills__list-item">
+          <div class="skills__list-icon">
+            <svg width="1792" height="1792" viewbox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1322 597l16-175h-884l47 534h612l-22 228-197 53-196-53-13-140h-175l22 278 362 100h4v-1l359-99 50-544h-644l-15-181h674zm-1130-469h1408l-128 1438-578 162-574-162z"></path>
+            </svg>
+          </div>
+          <h3 class="skills__list-title">CSS</h3>
+          <p class="skills__list-text">Отзывчивое форматирование, стилизация и оформление визуала страниц сайта с помощью каскадных таблиц стилей.</p>
         </li>
-        <li class="skills-list__item"><img class="skills-list__icon" src="#" alt="">
-          <h3 class="skills-list__title">Lorem ipsum</h3>
-          <p class="skills-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni incidunt accusantium</p>
+        <li class="skills__list-item">
+          <div class="skills__list-icon">
+            <svg width="1792" height="1792" viewbox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1322 597l16-175h-884l47 534h612l-22 228-197 53-196-53-13-140h-175l22 278 362 100h4v-1l359-99 50-544h-644l-15-181h674zm-1130-469h1408l-128 1438-578 162-574-162z"></path>
+            </svg>
+          </div>
+          <h3 class="skills__list-title">Методология БЭМ</h3>
+          <p class="skills__list-text">Компонентный подход к именованию классов дает структурированный, понятный код, исключая наложения css свойств из других блоков.</p>
+        </li>
+        <li class="skills__list-item">
+          <div class="skills__list-icon">
+            <svg width="1792" height="1792" viewbox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1322 597l16-175h-884l47 534h612l-22 228-197 53-196-53-13-140h-175l22 278 362 100h4v-1l359-99 50-544h-644l-15-181h674zm-1130-469h1408l-128 1438-578 162-574-162z"></path>
+            </svg>
+          </div>
+          <h3 class="skills__list-title">Flexbox/grid/bootstrap4</h3>
+          <p class="skills__list-text">Инструменты для быстрого создания креативных, гибких макетов. Во много раз ускорют процесс разработки и адаптации контента веб-страниц.</p>
+        </li>
+        <li class="skills__list-item">
+          <div class="skills__list-icon">
+            <svg width="1792" height="1792" viewbox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1322 597l16-175h-884l47 534h612l-22 228-197 53-196-53-13-140h-175l22 278 362 100h4v-1l359-99 50-544h-644l-15-181h674zm-1130-469h1408l-128 1438-578 162-574-162z"></path>
+            </svg>
+          </div>
+          <h3 class="skills__list-title">Хостинг</h3>
+          <p class="skills__list-text">Навыки выкладки/переноса готового сайта на хостинг. Подключение к серверу через FTP протокол, работа и редактирование кода в онлайн.</p>
+        </li>
+        <li class="skills__list-item">
+          <div class="skills__list-icon">
+            <svg width="1792" height="1792" viewbox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1322 597l16-175h-884l47 534h612l-22 228-197 53-196-53-13-140h-175l22 278 362 100h4v-1l359-99 50-544h-644l-15-181h674zm-1130-469h1408l-128 1438-578 162-574-162z"></path>
+            </svg>
+          </div>
+          <h3 class="skills__list-title">CMS Wordpress</h3>
+          <p class="skills__list-text">Установка CMS на сервере, интеграция верстки на Wordpress. Создание админ панели, с возможностью редактирования контента сайта.</p>
+        </li>
+        <li class="skills__list-item">
+          <div class="skills__list-icon">
+            <svg width="1792" height="1792" viewbox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1322 597l16-175h-884l47 534h612l-22 228-197 53-196-53-13-140h-175l22 278 362 100h4v-1l359-99 50-544h-644l-15-181h674zm-1130-469h1408l-128 1438-578 162-574-162z"></path>
+            </svg>
+          </div>
+          <h3 class="skills__list-title">Препроцессоры CSS</h3>
+          <p class="skills__list-text">Использование препроцессоров (scss/saas, less) значительно ускоряет работу, за счет гибких возможностей которых нет в css.</p>
+        </li>
+        <li class="skills__list-item">
+          <div class="skills__list-icon">
+            <svg width="1792" height="1792" viewbox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1322 597l16-175h-884l47 534h612l-22 228-197 53-196-53-13-140h-175l22 278 362 100h4v-1l359-99 50-544h-644l-15-181h674zm-1130-469h1408l-128 1438-578 162-574-162z"></path>
+            </svg>
+          </div>
+          <h3 class="skills__list-title">Gulp/PUG</h3>
+          <p class="skills__list-text">Блочный подход к веб-разработке. В основе лежит разделение верстки на независимые блоки. Блоки используются в разных местах, избегая «Copy-Paste».</p>
+        </li>
+        <li class="skills__list-item">
+          <div class="skills__list-icon">
+            <svg width="1792" height="1792" viewbox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1322 597l16-175h-884l47 534h612l-22 228-197 53-196-53-13-140h-175l22 278 362 100h4v-1l359-99 50-544h-644l-15-181h674zm-1130-469h1408l-128 1438-578 162-574-162z"></path>
+            </svg>
+          </div>
+          <h3 class="skills__list-title">JQuery</h3>
+          <p class="skills__list-text">Подключение библиотеки JQuery. Подключение и настройка плагинов, эксклюзивных анимаций и эффектов. Самостоятельное редактирование.</p>
+        </li>
+        <li class="skills__list-item">
+          <div class="skills__list-icon">
+            <svg width="1792" height="1792" viewbox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1322 597l16-175h-884l47 534h612l-22 228-197 53-196-53-13-140h-175l22 278 362 100h4v-1l359-99 50-544h-644l-15-181h674zm-1130-469h1408l-128 1438-578 162-574-162z"></path>
+            </svg>
+          </div>
+          <h3 class="skills__list-title">JavaScript</h3>
+          <p class="skills__list-text">Понимание основ JS (переменные, условия, циклы, функции, массивы, методы, объекты, работа с DOM, стандарт ES6, асинхронность, Promises, Async/Await, практика работы с сервером), умение самостоятельно писать код с полного нуля. Применение знаний в реальных проектах.</p>
         </li>
       </ul>
-      <button>TEST</button>
     </div>
   </div>
+  <footer class="footer" id="footer"> <a class="footer__link" href="https://github.com/VladislavChe">github.com/VladislavChe</a></footer>
   <script src="js/main.js"></script>
 </body>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Дело которым я живу">
+  <meta name="keywords" content="дело которым я живу, мое портфолио, мои навыки, верстка, верстка frontend, мои навыки, мои работы">
+  <!-- Favicon-->
+  <!--
+  <link rel="icon" href="img/waterfall.jpg" type="image/x-icon" />
+  <link rel="shortcut icon" href="img/ilustration.ico" type="image/x-icon" />
+  -->
+  <!-- OG Tags-->
+  <meta property="og:title" content="Дело которым я живу">
+  <meta property="og:description" content="Дело которым я живу, 75 реализованных проектов, 154 положительных отзыва, о заслугах, 8 лет опыта, мои контакты, не стесняйтесь пишите">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="#">
+  <meta property="og:site_name" content="Мое портфолио">
+  <!-- adaptability-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&amp;display=swap" rel="stylesheet">
+  <!-- CSS styles-->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="slider">
+    <div class="container">
+      <h1 class="slider__title">Slider</h1>
+      <div class="slider__slider-wrapper">
+        <div class="slider__slide slider__active" data-slide="1"><img src="../img/src/summer.jpg" alt=""></div>
+        <div class="slider__slide" data-slide="2"><img src="../img/src/winter.jpg" alt=""></div>
+        <div class="slider__slide" data-slide="3"><img src="../img/src/outumn.jpg" alt=""></div>
+        <div id="slider__btn-prev">
+          <svg viewBox="396 396 1192 1192" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1203 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z"></path>
+          </svg>
+        </div>
+        <div id="slider__btn-next">
+          <svg viewBox="150 350 1192 1192" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1171 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"> </path>
+          </svg>
+        </div>
+      </div>
+      <div class="slider__dots-wrapper" id="slider__dots-wrapper"><span class="dot slider__active" data-dot="1"></span><span class="dot" data-dot="2"></span><span class="dot" data-dot="3"></span></div>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
