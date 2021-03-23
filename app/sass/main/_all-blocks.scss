@@ -795,6 +795,9 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
+    @include media(576px) {
+      width: 100%;
+    }
   }
   &__inner-scalle {
     width: 305px;
@@ -807,6 +810,9 @@
     border: 3px solid blue;
     width: 305px;
     height: 15px;
+    @include media(576px) {
+      width: 100%;
+    }
   }
   &__bg-scalle {
     width: 50px;

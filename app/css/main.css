@@ -1225,6 +1225,9 @@ h3 {
         -ms-flex-pack: center;
             justify-content: center;
     margin-bottom: 50px; }
+    @media only screen and (max-width: 576px) {
+      .map__scalle {
+        width: 100%; } }
   .map__inner-scalle {
     width: 305px;
     height: 80px;
@@ -1239,6 +1242,9 @@ h3 {
     border: 3px solid blue;
     width: 305px;
     height: 15px; }
+    @media only screen and (max-width: 576px) {
+      .map__inner-mini-scalle {
+        width: 100%; } }
   .map__bg-scalle {
     width: 50px;
     max-width: 300px;
