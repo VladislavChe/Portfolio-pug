@@ -842,7 +842,6 @@
     min-height: 50px;
     max-width: 300px;
     max-height: 300px;
-    // background: url(../img/src/map-img.png) no-repeat center 100%;
   }
 }
 
@@ -1335,18 +1334,6 @@
   #slider__btn-next {
     right: 0;
   }
-  // &__prev {
-  //   display: block;
-  //   width: 100%;
-  //   height: 100%;
-  //   background: url(../img/src/prev.svg) center no-repeat;
-  // }
-  // &__next {
-  //   display: block;
-  //   width: 100%;
-  //   height: 100%;
-  //   background: url(../img/src/next.svg) center no-repeat;
-  // }
   &__dots-wrapper {
     display: flex;
     justify-content: center;
