@@ -1,0 +1,44 @@
+.social-links {
+  &__list {
+    display: flex;
+    width: 272px;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+    @include media(768px) {
+      width: 233px;
+    }
+  }
+  &__item {
+    a {
+      display: block;
+      transition: all 0.3s ease;
+      svg {
+        width: 35px;
+        height: 35px;
+        path {
+          fill: $textcolor;
+          opacity: 0.6;
+        }
+      }
+      &:hover {
+        transform: scale(1.1);
+        transition: all 0.3s ease;
+        path {
+          opacity: 1;
+        }
+      }
+      img {
+        width: 30px;
+        height: 30px;
+        opacity: 0.6;
+        transition: all 0.3s ease;
+        &:hover {
+          opacity: 1;
+          transform: scale(1.1);
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+}
