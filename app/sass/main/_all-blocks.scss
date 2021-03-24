@@ -851,6 +851,7 @@
   justify-content: space-between;
   width: 100%;
   padding-top: 50px;
+  cursor: pointer;
   /*Responsive-Start*/
   @include media(576px) {
     padding-top: 15px;
@@ -858,7 +859,10 @@
   /*Responsive-End*/
 
   /*logo-Start*/
-  &__logo-wrapp {
+  &__logo {
+    display: flex;
+    border: 1px solid #c8c8c8;
+    border-radius: 50%;
     width: 60px;
     height: 60px;
     justify-content: center;
@@ -869,16 +873,11 @@
       height: 50px;
     }
   }
-  &__logo {
-    display: inline-block;
-    border: 1px solid #c8c8c8;
-    border-radius: 50%;
-  }
 
   &__logo-letters {
     color: $mainColor;
     transition: all 0.5s ease;
-    cursor: crosshair;
+    cursor: pointer;
     &:hover {
       transform: rotate(-35deg);
       transition: all 0.5s ease;
@@ -956,12 +955,9 @@
 
   /*logo-Start*/
   &__logo {
-    display: inline-block;
+    display: flex;
     border: 1px solid #c8c8c8;
     border-radius: 50%;
-  }
-
-  &__logo-wrapp {
     width: 60px;
     height: 60px;
     justify-content: center;
@@ -976,7 +972,7 @@
   &__logo-letters {
     color: $mainColor;
     transition: all 0.5s ease;
-    cursor: crosshair;
+    cursor: pointer;
     &:hover {
       transform: rotate(-35deg);
       transition: all 0.5s ease;
@@ -992,6 +988,7 @@
     color: #c8c8c8;
     font-size: 30px;
     transition: all 0.5s ease;
+    cursor: pointer;
     span {
       width: 40px;
       height: 0;

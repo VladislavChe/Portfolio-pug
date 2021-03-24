@@ -1275,6 +1275,7 @@ h3 {
           justify-content: space-between;
   width: 100%;
   padding-top: 50px;
+  cursor: pointer;
   /*Responsive-Start*/
   /*Responsive-End*/
   /*logo-Start*/
@@ -1284,7 +1285,12 @@ h3 {
   @media only screen and (max-width: 576px) {
     .menu {
       padding-top: 15px; } }
-  .menu__logo-wrapp {
+  .menu__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: 1px solid #c8c8c8;
+    border-radius: 50%;
     width: 60px;
     height: 60px;
     -webkit-box-pack: center;
@@ -1295,19 +1301,15 @@ h3 {
             align-items: center;
     padding: 10px; }
     @media only screen and (max-width: 768px) {
-      .menu__logo-wrapp {
+      .menu__logo {
         width: 50px;
         height: 50px; } }
-  .menu__logo {
-    display: inline-block;
-    border: 1px solid #c8c8c8;
-    border-radius: 50%; }
   .menu__logo-letters {
     color: #c70039;
     -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    cursor: crosshair; }
+    cursor: pointer; }
     .menu__logo-letters:hover {
       -webkit-transform: rotate(-35deg);
           -ms-transform: rotate(-35deg);
@@ -1392,10 +1394,11 @@ h3 {
     -o-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out; }
   .burger-menu__logo {
-    display: inline-block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     border: 1px solid #c8c8c8;
-    border-radius: 50%; }
-  .burger-menu__logo-wrapp {
+    border-radius: 50%;
     width: 60px;
     height: 60px;
     -webkit-box-pack: center;
@@ -1406,7 +1409,7 @@ h3 {
             align-items: center;
     padding: 10px; }
     @media only screen and (max-width: 768px) {
-      .burger-menu__logo-wrapp {
+      .burger-menu__logo {
         width: 50px;
         height: 50px; } }
   .burger-menu__logo-letters {
@@ -1414,7 +1417,7 @@ h3 {
     -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    cursor: crosshair; }
+    cursor: pointer; }
     .burger-menu__logo-letters:hover {
       -webkit-transform: rotate(-35deg);
           -ms-transform: rotate(-35deg);
@@ -1430,7 +1433,8 @@ h3 {
     font-size: 30px;
     -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
-    transition: all 0.5s ease; }
+    transition: all 0.5s ease;
+    cursor: pointer; }
     .burger-menu__close span {
       width: 40px;
       height: 0; }
