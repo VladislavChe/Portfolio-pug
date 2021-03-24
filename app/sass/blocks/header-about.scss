@@ -55,13 +55,16 @@
       display: block;
       color: $mainColor;
       margin-top: 20px;
+      @include media(576px) {
+        font-size: 26px;
+      }
     }
     @include media(992px) {
       margin: 0 auto 25px auto;
       text-align: center;
     }
     @include media(576px) {
-      font-size: 30px;
+      font-size: 26px;
     }
   }
   &__offer-text {

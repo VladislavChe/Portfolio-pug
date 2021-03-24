@@ -842,13 +842,16 @@ h3 {
       display: block;
       color: #c70039;
       margin-top: 20px; }
+      @media only screen and (max-width: 576px) {
+        .header-about__offer-title span {
+          font-size: 26px; } }
     @media only screen and (max-width: 992px) {
       .header-about__offer-title {
         margin: 0 auto 25px auto;
         text-align: center; } }
     @media only screen and (max-width: 576px) {
       .header-about__offer-title {
-        font-size: 30px; } }
+        font-size: 26px; } }
   .header-about__offer-text {
     font-size: 18px;
     color: #c8c8c8;

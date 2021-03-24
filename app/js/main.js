@@ -142,6 +142,25 @@ if (!hamburger) {
 /*burgerMenu-End*/
 /*index.html - END*/
 
+/*about.html - START*/
+const pageAbout = document.getElementById('header-about');
+if (!pageAbout) {
+} else {
+  const anchors = document.querySelectorAll('a[href*="#"]');
+
+  for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const blockId = anchor.getAttribute('href');
+      document.querySelector('' + blockId).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    });
+  }
+}
+/*about.html - END*/
+
 /*page-accordeon.html - START*/
 const pageAccordeon = document.querySelectorAll('.accordeon__title');
 if (!pageAccordeon) {
