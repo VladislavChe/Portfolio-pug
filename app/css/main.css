@@ -1557,9 +1557,9 @@ h3 {
     -webkit-transform: translateY(-131%);
         -ms-transform: translateY(-131%);
             transform: translateY(-131%);
-    -webkit-transition: 0.5s ease-in-out;
-    -o-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out; }
+    -webkit-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out; }
   @media only screen and (max-width: 992px) {
     .project:hover .project__img,
     .project:hover .project__text {
@@ -1902,7 +1902,8 @@ h3 {
         -ms-flex-align: center;
             align-items: center;
     border: 1px solid whitesmoke;
-    border-radius: 5px; }
+    border-radius: 5px;
+    cursor: pointer; }
     .tabs__btn.tabs__active {
       color: #fff;
       background: blue; }

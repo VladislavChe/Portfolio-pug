@@ -29,7 +29,7 @@
     .project__img,
     .project__text {
       transform: translateY(-131%);
-      transition: $time;
+      transition: 1s ease-in-out;
     }
     @include media(992px) {
       .project__img,

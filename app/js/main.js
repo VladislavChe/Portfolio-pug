@@ -166,14 +166,14 @@ const pageAccordeon = document.querySelectorAll('.accordeon__title');
 if (!pageAccordeon) {
   // console.log('no');
 } else {
-  var accordeon = document.querySelectorAll('.accordeon__wrapp'),
+  let accordeon = document.querySelectorAll('.accordeon__wrapp'),
     accordeonBtn = document.querySelectorAll('.accordeon__element');
 
-  for (var i = 0; i < accordeonBtn.length; i++) {
+  for (let i = 0; i < accordeonBtn.length; i++) {
     accordeonBtn[i].addEventListener('click', function (event) {
-      var currBtn = event.target.dataset.btn;
+      let currBtn = event.target.dataset.btn;
 
-      for (var j = 0; j < accordeon.length; j++) {
+      for (let j = 0; j < accordeon.length; j++) {
         if (accordeon[j].style.maxHeight) {
           accordeon[j].style.maxHeight = null;
         } else {
@@ -192,17 +192,17 @@ let cube = document.getElementById('generator__cube');
 if (!cube) {
   // console.log('no');
 } else {
-  var rangeTl = document.getElementById('generator__tlr'),
+  let rangeTl = document.getElementById('generator__tlr'),
     rangeTr = document.getElementById('generator__trr'),
     rangeBl = document.getElementById('generator__blr'),
     rangeBr = document.getElementById('generator__brr');
 
-  var resultTl = document.getElementById('generator__result-tlr'),
+  let resultTl = document.getElementById('generator__result-tlr'),
     resultTr = document.getElementById('generator__result-trr'),
     resultBl = document.getElementById('generator__result-blr'),
     resultBr = document.getElementById('generator__result-brr');
 
-  var inputs = document.querySelectorAll('.generator__input');
+  let inputs = document.querySelectorAll('.generator__input');
 
   function changeRadius() {
     resultTl.innerHTML = rangeTl.value;
@@ -226,11 +226,11 @@ if (!cube) {
     node.addEventListener('input', getCode);
   }
 
-  var btnViewcode = document.getElementById('generator__btn-viewcode'),
+  let btnViewcode = document.getElementById('generator__btn-viewcode'),
     resultCode = document.getElementById('generator__samecode');
 
   function getCode() {
-    var style = getComputedStyle(cube);
+    let style = getComputedStyle(cube);
     resultCode.innerHTML = 'border-radius: ' + style.borderRadius + ';';
     btnViewcode.addEventListener('click', function () {
       resultCode.classList.toggle('generator__active');
@@ -249,13 +249,13 @@ const pageCalculator = document.querySelector('.calculator__title');
 if (!pageCalculator) {
   // console.log('no');
 } else {
-  var btn = document.querySelectorAll('.calculator__wrapp-input'),
+  let btn = document.querySelectorAll('.calculator__wrapp-input'),
     plans = document.querySelectorAll('.calculator__selected-plan'),
     inputs = document.querySelectorAll('.calculator__price-input'),
     numbers = document.getElementById('calculator__numb');
 
   function activePlan(el) {
-    for (var i = 0; i < btn.length; i++) {
+    for (let i = 0; i < btn.length; i++) {
       btn[i].classList.remove('calculator__active');
     }
     el.classList.add('calculator__active');
@@ -265,9 +265,9 @@ if (!pageCalculator) {
     element.addEventListener('click', function (event) {
       activePlan(element);
 
-      var currInput = this.dataset.input;
+      let currInput = this.dataset.input;
 
-      for (var j = 0; j < plans.length; j++) {
+      for (let j = 0; j < plans.length; j++) {
         plans[j].classList.remove('calculator__active');
         if (plans[j].dataset.plan === currInput) {
           plans[j].classList.add('calculator__active');
@@ -278,36 +278,36 @@ if (!pageCalculator) {
 
   inputs.forEach((input) => {
     input.addEventListener('change', (e) => {
-      var inputNumb = +input.value;
+      let inputNumb = +input.value;
 
       summ(inputNumb);
     });
   });
 
-  var op = document.getElementById('calculator__op');
+  let op = document.getElementById('calculator__op');
 
   function summ(a) {
     if (numbers.value == 10) {
       totalSumm(staticOptionNumb * a);
     }
 
-    var optionNumb = +numbers.value;
+    let optionNumb = +numbers.value;
 
-    var total = a * optionNumb;
+    let total = a * optionNumb;
 
     totalSumm(total);
 
     numbers.addEventListener('change', () => {
-      var optionNumb = +numbers.value;
+      let optionNumb = +numbers.value;
 
-      var total = a * optionNumb;
+      let total = a * optionNumb;
 
       totalSumm(total);
     });
   }
 
-  var totality = document.querySelector('.calculator__total-price');
-  var staticOptionNumb = 10;
+  let totality = document.querySelector('.calculator__total-price');
+  let staticOptionNumb = 10;
 
   function totalSumm(sum) {
     totality.innerHTML = sum;
@@ -320,12 +320,12 @@ const pageSlider = document.querySelector('.slider__title');
 if (!pageSlider) {
   // console.log('no');
 } else {
-  var slides = document.querySelectorAll('.slider__slide'),
+  let slides = document.querySelectorAll('.slider__slide'),
     btnPrev = document.getElementById('slider__btn-prev'),
     btnNext = document.getElementById('slider__btn-next'),
     dots = document.querySelectorAll('.dot');
 
-  var indexSlide = 0;
+  let indexSlide = 0;
 
   function activeSlide(n) {
     for (slide of slides) {
@@ -370,7 +370,7 @@ if (!pageSlider) {
   }
 
   function activeDot(act) {
-    for (var i = 0; i < dots.length; i++) {
+    for (let i = 0; i < dots.length; i++) {
       dots[i].classList.remove('slider__active');
     }
     act.classList.add('slider__active');
@@ -378,10 +378,10 @@ if (!pageSlider) {
 
   dots.forEach((dot) => {
     dot.addEventListener('click', function (event) {
-      var currDot = event.target.dataset.dot;
+      let currDot = event.target.dataset.dot;
       activeDot(event.target);
 
-      for (var j = 0; j < slides.length; j++) {
+      for (let j = 0; j < slides.length; j++) {
         slides[j].classList.remove('slider__active');
         if (slides[j].dataset.slide === currDot) {
           slides[j].classList.add('slider__active');
@@ -396,21 +396,21 @@ const pageTabs = document.querySelector('.tabs__title');
 if (!pageTabs) {
   // console.log('no');
 } else {
-  var tabs = document.querySelectorAll('.tabs__btn'),
+  let tabs = document.querySelectorAll('.tabs__btn'),
     content = document.querySelectorAll('.tabs__content');
 
   function changeClass(el) {
-    for (var i = 0; i < tabs.length; i++) {
+    for (let i = 0; i < tabs.length; i++) {
       tabs[i].classList.remove('tabs__active');
     }
     el.classList.add('tabs__active');
   }
 
-  for (var j = 0; j < tabs.length; j++) {
+  for (let j = 0; j < tabs.length; j++) {
     tabs[j].addEventListener('click', function (event) {
-      var currTab = event.target.dataset.btn;
+      let currTab = event.target.dataset.btn;
       changeClass(event.target);
-      for (var i = 0; i < content.length; i++) {
+      for (let i = 0; i < content.length; i++) {
         content[i].classList.remove('tabs__active');
         if (content[i].dataset.content === currTab) {
           content[i].classList.add('tabs__active');

@@ -1105,7 +1105,7 @@
     .project__img,
     .project__text {
       transform: translateY(-131%);
-      transition: $time;
+      transition: 1s ease-in-out;
     }
     @include media(992px) {
       .project__img,
@@ -1444,6 +1444,7 @@
     align-items: center;
     border: 1px solid whitesmoke;
     border-radius: 5px;
+    cursor: pointer;
     &.tabs__active {
       color: #fff;
       background: blue;
