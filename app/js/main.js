@@ -188,60 +188,58 @@ if (!pageAccordeon) {
 
 /*page-accordeon.html - END*/
 /*page-generator.html - START*/
-let cube = document.getElementById('generator__cube');
-if (!cube) {
-  // console.log('no');
-} else {
-  let rangeTl = document.getElementById('generator__tlr'),
-    rangeTr = document.getElementById('generator__trr'),
-    rangeBl = document.getElementById('generator__blr'),
-    rangeBr = document.getElementById('generator__brr');
+{
+  console.log('cube');
+  const cube = document.getElementById('generator__cube');
+  if (!cube) {
+    // console.log('no');
+  } else {
+    const btnShowCode = document.getElementById('generator__btn-viewcode'),
+      textCode = document.getElementById('generator__samecode');
 
-  let resultTl = document.getElementById('generator__result-tlr'),
-    resultTr = document.getElementById('generator__result-trr'),
-    resultBl = document.getElementById('generator__result-blr'),
-    resultBr = document.getElementById('generator__result-brr');
+    const inputs = document.querySelectorAll('.generator__input');
 
-  let inputs = document.querySelectorAll('.generator__input');
+    function changeRadius() {
+      const range = {
+        tl: document.getElementById('generator__tlr').value,
+        tr: document.getElementById('generator__trr').value,
+        br: document.getElementById('generator__brr').value,
+        bl: document.getElementById('generator__blr').value,
+      };
 
-  function changeRadius() {
-    resultTl.innerHTML = rangeTl.value;
-    resultTr.innerHTML = rangeTr.value;
-    resultBl.innerHTML = rangeBl.value;
-    resultBr.innerHTML = rangeBr.value;
+      //change text of range
+      document.getElementById('generator__result-tlr').innerHTML = range.tl;
+      document.getElementById('generator__result-trr').innerHTML = range.tr;
+      document.getElementById('generator__result-brr').innerHTML = range.br;
+      document.getElementById('generator__result-blr').innerHTML = range.bl;
 
-    cube.style.borderRadius =
-      rangeTl.value +
-      'px ' +
-      rangeTr.value +
-      'px ' +
-      rangeBr.value +
-      'px ' +
-      rangeBl.value +
-      'px ';
-  }
+      const bdrs = `${range.tl}px ${range.tr}px ${range.br}px ${range.bl}px`;
 
-  for (node of inputs) {
-    node.addEventListener('input', changeRadius);
-    node.addEventListener('input', getCode);
-  }
+      cube.style.borderRadius = bdrs;
+    }
 
-  let btnViewcode = document.getElementById('generator__btn-viewcode'),
-    resultCode = document.getElementById('generator__samecode');
+    btnShowCode.addEventListener('click', function () {
+      textCode.classList.toggle('generator__active');
 
-  function getCode() {
-    let style = getComputedStyle(cube);
-    resultCode.innerHTML = 'border-radius: ' + style.borderRadius + ';';
-    btnViewcode.addEventListener('click', function () {
-      resultCode.classList.toggle('generator__active');
-      if (resultCode.classList.contains('generator__active')) {
-        btnViewcode.innerHTML = 'Скрыть код';
+      if (textCode.classList.contains('generator__active')) {
+        btnShowCode.innerHTML = 'Скрыть код';
       } else {
-        btnViewcode.innerHTML = 'Показать код';
+        btnShowCode.innerHTML = 'Показать код';
       }
     });
+
+    function changeTextCode() {
+      const cubeStyle = getComputedStyle(cube);
+      textCode.innerHTML = 'border-radius: ' + cubeStyle.borderRadius + ';';
+    }
+
+    for (node of inputs) {
+      node.addEventListener('input', changeRadius);
+      node.addEventListener('input', changeTextCode);
+    }
   }
 }
+
 /*page-generator.html - END*/
 
 /*page-calculator.html - START*/
