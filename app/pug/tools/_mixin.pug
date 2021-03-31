@@ -1,9 +1,8 @@
-mixin project(img, date, title, text)
+mixin project(link, img, title, text)
   div.project
-    a.project__link(href="#")
+    a.project__link(href=link target='_blank')
       div.project__img
         img(src=img, alt="")
-        span.project__date=date
       div.project__text
         h3=title
         p=text

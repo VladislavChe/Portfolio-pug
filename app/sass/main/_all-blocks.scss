@@ -1131,19 +1131,6 @@
       border-radius: 10px;
     }
   }
-  &__date {
-    position: absolute;
-    bottom: 0;
-    padding: 5px;
-    border-radius: 0px 0px 0px 10px;
-    background: $mainColor;
-    @include media(992px) {
-      font-size: 15px;
-    }
-    @include media(576px) {
-      font-size: 12px;
-    }
-  }
   &__text {
     margin-top: 40px;
     text-align: center;
