@@ -938,7 +938,7 @@ h3 {
       -o-transition: all 0.5s ease;
       transition: all 0.5s ease; }
       .header-about__offer-photo div:after {
-        content: "";
+        content: '';
         position: absolute;
         top: 15px;
         left: 15px;
@@ -949,6 +949,9 @@ h3 {
         -webkit-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
         transition: all 0.5s ease; }
+        @media only screen and (max-width: 992px) {
+          .header-about__offer-photo div:after {
+            display: none; } }
     .header-about__offer-photo img {
       width: 100%;
       height: 100%;

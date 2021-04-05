@@ -496,10 +496,9 @@
       left: -4px;
       max-width: 266px;
       transition: all 0.5s ease;
-      
 
       &:after {
-        content: "";
+        content: '';
         position: absolute;
         top: 15px;
         left: 15px;
@@ -508,6 +507,9 @@
         height: 100%;
         border: 4px solid $mainColor;
         transition: all 0.5s ease;
+        @include media(992px) {
+          display: none;
+        }
       }
     }
     img {
