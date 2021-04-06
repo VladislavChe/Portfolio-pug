@@ -369,10 +369,10 @@
     btnPrev.addEventListener('click', prevSlide);
 
     function changeDot(d) {
-      for (dot of dots) {
+      dots.forEach((dot) => {
         dot.classList.remove('slider__active');
         dots[d].classList.add('slider__active');
-      }
+      });
     }
 
     function activeDot(act) {
