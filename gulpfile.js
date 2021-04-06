@@ -170,11 +170,11 @@ task('build', async function () {
   let buildJs = src(['app/js/**/*', '!app/js/main.js']).pipe(dest('dist/js'));
 
   let unglifyJs = src('app/js/main.js')
-    /*
-    .pipe(babel({
-			presets: ['@babel/env']
-		}))
-    */
+    .pipe(
+      babel({
+        presets: ['@babel/preset-env'],
+      })
+    )
     .pipe(uglify())
     .pipe(dest('dist/js'));
 
