@@ -172,7 +172,7 @@ task('build', async function () {
   let unglifyJs = src('app/js/main.js')
     .pipe(
       babel({
-        presets: ['@babel/preset-env'],
+        //presets: ['@babel/preset-env'],
       })
     )
     .pipe(uglify())
