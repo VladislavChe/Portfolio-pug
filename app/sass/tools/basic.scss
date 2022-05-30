@@ -6,6 +6,8 @@ body *:after {
 
 html,
 body {
+  scrollbar-color: #c70039 #2B2B2B;     /* «цвет ползунка» «цвет полосы скроллбара» */
+  scrollbar-width: thin; /* толщина */
   min-height: 100vh;
   background-color: #333;
   font-family: 'Raleway', sans-serif;
@@ -146,4 +148,21 @@ h3 {
   height: 100vh;
   background: #111111;
   z-index: 1;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 4px; /* ширина для вертикального скролла */
+  height: 4px; /* высота для горизонтального скролла */
+  background-color: #2B2B2B;
+}
+
+/* Ползунок */
+::-webkit-scrollbar-thumb {
+  background-color: #c70039;
+  border-radius: 9em;
+  box-shadow: inset 1px 1px 10px #f3faf7;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #253861;
 }

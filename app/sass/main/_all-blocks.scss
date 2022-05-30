@@ -1143,6 +1143,9 @@
     .project__text {
       transform: translateY(-131%);
       transition: 1s ease-in-out;
+      overflow-y: auto;
+      scrollbar-color: #c70039 #2B2B2B;     /* «цвет ползунка» «цвет полосы скроллбара» */
+      scrollbar-width: thin; /* толщина */
     }
     @include media(992px) {
       .project__img,
